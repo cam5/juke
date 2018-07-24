@@ -6,6 +6,12 @@ GENDERS      = ['Female', 'Male', 'None']
 gender_choices      = sorted((g, g) for g in GENDERS)
 artist_type_choices = sorted((t, t) for t in ARTIST_TYPES)
 
+"""
+An artist is generally a musician (or musician persona), group of musicians, or
+other music professional (like a producer or engineer). Occasionally, it can
+also be a non-musical person (like a photographer, an illustrator, or a poet
+whose writings are set to music), or even a fictional character.
+"""
 class Artist(models.Model):
     name      = models.CharField(max_length=100)
     sort_name = models.CharField(max_length=100)
@@ -14,10 +20,12 @@ class Artist(models.Model):
     area      = models.CharField(blank=True, max_length=100)
     begin     = models.DateTimeField(blank=True)
     end       = models.DateTimeField(blank=True)
-    ipi       = models.CharField(blank=True, max_length=100)
-    isni      = models.CharField(blank=True, max_length=100)
     alias     = models.CharField(blank=True, max_length=100)
     mbid      = models.CharField(blank=True, max_length=100)
+
+    # Omitted fields from MusicBraniz
+    # - ipi  (interested party information [rights management])
+    # - isni (International Standard Name Identifier)
 
 """
 A release represents the unique release (i.e. issuing) of a product on a

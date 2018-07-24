@@ -6,8 +6,6 @@ expected_blank_props = (
     'type',
     'sort_name',
     'area',
-    'ipi',
-    'isni',
     'alias',
     'mbid',
 )
