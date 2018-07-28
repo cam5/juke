@@ -32,10 +32,6 @@ A release represents the unique release (i.e. issuing) of a product on a
 specific date with specific release information such as the country, label,
 barcode and packaging. If you walk into a store and purchase an album or
 single, they are each represented as one release.
-
-Each release belongs to a release group and contains at least one medium
-(commonly referred to as a disc when talking about a CD release). Each medium
-has a tracklist.
 """
 RELEASE_TYPES        = ['Official', 'Promotional', 'Bootleg', 'Pseudo-Release']
 release_type_choices = sorted((t, t) for t in RELEASE_TYPES)
@@ -59,3 +55,4 @@ class Release(models.Model):
     # - annotation
     # - data quality
     # - format
+    # - release group (related model)
