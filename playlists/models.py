@@ -56,3 +56,21 @@ class Release(models.Model):
     # - data quality
     # - format
     # - release group (related model)
+
+"""
+A track belongs to a release. It represents a "song", ya dummy! Orderable by
+dint of the "number" field.
+"""
+class Track(models.Model):
+  release  = models.ForeignKey('Release', on_delete=models.CASCADE)
+  number   = models.PositiveSmallIntegerField()
+  name     = models.CharField(max_length=100)
+  length   = models.DurationField()
+
+  # Omitted fields from MusicBrainz
+  # - recording (we'll tie it straight to "release")
+  # - medium (same as above)
+  # - artist_credit (see issue #3)
+  # - edits_pending
+  # - position (see issue #2)
+  # - last_updated
