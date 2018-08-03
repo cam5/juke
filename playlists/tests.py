@@ -41,5 +41,16 @@ class TrackModelTest(TestCase):
         with self.assertRaises(AttributeError):
             release = track.release
 
-"""@TODO"""
-# class ArtistTrackReleaseRelationshipTestCase(TestCase):
+class ArtistTrackReleaseRelationshipTestCase(TestCase):
+    def test_relations_to_each_other_entity(self):
+    """Basically just want to ensure that doing this doesn't cause attribute
+    errors when accessed later."""
+        track = Track()
+        artist = Artist()
+        release = Release()
+
+        track.release = release
+        release.artist = artist
+
+        self.assertIs(track.release, release)
+        self.assertIs(release.artist, artist)
