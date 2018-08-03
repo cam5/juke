@@ -1,8 +1,12 @@
+"""Test suite for playlists app"""
 from django.test import TestCase
 from .models import Artist, Release, Track
 
+
 class ArtistModelTest(TestCase):
-    def test_model_has_expected_defaults(self):
+    """Tests re: the model for artist"""
+    def test_expected_defaults(self):
+        """Artist should instantiate with predictable values"""
         artist = Artist()
 
         for blank in ('name', 'type', 'sort_name', 'area', 'alias', 'mbid'):
@@ -13,8 +17,11 @@ class ArtistModelTest(TestCase):
 
         self.assertIs(artist.gender, 'None')
 
+
 class ReleaseModelTest(TestCase):
-    def test_model_has_expected_defaults(self):
+    """Tests re: the model for release"""
+    def test_expected_defaults(self):
+        """Release should instantiate with predictable values"""
         release = Release()
 
         for blank in ('title', 'country', 'label', 'catalogue_number',
@@ -28,9 +35,13 @@ class ReleaseModelTest(TestCase):
         # dynamically, through some sort of voodoo I don't understand atm.
         with self.assertRaises(AttributeError):
             artist = release.artist
+            self.assertNotEqual(artist, '')
+
 
 class TrackModelTest(TestCase):
-    def test_model_has_expected_defaults(self):
+    """Tests re: the model for track"""
+    def test_expected_defaults(self):
+        """Track should instantiate with predictable values"""
         track = Track()
 
         for attr in ('number', 'length'):
@@ -40,11 +51,14 @@ class TrackModelTest(TestCase):
 
         with self.assertRaises(AttributeError):
             release = track.release
+            self.assertNotEqual(release, '')
+
 
 class ArtistTrackReleaseRelationshipTestCase(TestCase):
-    def test_relations_to_each_other_entity(self):
-    """Basically just want to ensure that doing this doesn't cause attribute
-    errors when accessed later."""
+    """Tests regarding the relation <> entities"""
+    def test_entity_relations(self):
+        """Basically just want to ensure that doing this doesn't cause attribute
+        errors when accessed later."""
         track = Track()
         artist = Artist()
         release = Release()
