@@ -28,6 +28,9 @@ class Artist(models.Model):
     # - ipi  (interested party information [rights management])
     # - isni (International Standard Name Identifier)
 
+    def __str__(self):
+        return self.name
+
 
 RELEASE_TYPES = ['Official', 'Promotional', 'Bootleg', 'Pseudo-Release']
 RELEASE_TYPE_CHOICES = sorted((t, t) for t in RELEASE_TYPES)
@@ -58,6 +61,9 @@ class Release(models.Model):
     # - format
     # - release group (related model)
 
+    def __str__(self):
+        return self.title
+
 
 class Track(models.Model):
     """ A track belongs to a release. It represents a "song", ya dummy!
@@ -74,3 +80,6 @@ class Track(models.Model):
     # - edits_pending
     # - position (see issue #2)
     # - last_updated
+
+    def __str__(self):
+        return self.name
