@@ -31,6 +31,10 @@ class Artist(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:  # pylint: disable=too-few-public-methods
+        """Metadata for Artist model"""
+        ordering = ('name',)
+
 
 RELEASE_TYPES = ['Official', 'Promotional', 'Bootleg', 'Pseudo-Release']
 RELEASE_TYPE_CHOICES = sorted((t, t) for t in RELEASE_TYPES)
@@ -68,7 +72,8 @@ class Release(models.Model):
 class Track(models.Model):
     """ A track belongs to a release. It represents a "song", ya dummy!
     Orderable by dint of the "number" field."""
-    release = models.ForeignKey('Release', on_delete=models.CASCADE)
+    release = models.ForeignKey('Release', on_delete=models.CASCADE,
+                                related_name='tracks')
     number = models.PositiveSmallIntegerField()
     name = models.CharField(max_length=100)
     length = models.DurationField()
