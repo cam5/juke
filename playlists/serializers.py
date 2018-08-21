@@ -10,7 +10,7 @@ class ArtistSerializer(serializers.ModelSerializer):
         """Configure metadata for artist serialization"""
         ordering = ('name',)
         model = Artist
-        fields = '__all__'
+        exclude = ('sort_name',)
 
 
 class TrackSerializer(serializers.ModelSerializer):
