@@ -105,7 +105,7 @@ class EntitiesListViews(APITestCase):
         We expect there to be only one album, called "Achy Breaky Heart", and
         for it to have  18 tracks, and a few other attrs.
         """
-        json_data = json.loads(response.content)['results']
+        json_data = response.json()['results']
         album = json_data[0]
 
         self.assertTrue(album['title'], 'Achy Breaky Heart')
