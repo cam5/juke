@@ -111,3 +111,12 @@ class EntitiesListViews(APITestCase):
         self.assertTrue(album['artist'], 'Billy Rae Cyrus')
         self.assertTrue(len(album['tracks']), 18)
         self.assertTrue(album['status'], 'Official')
+
+
+class SearchView(APITestCase):
+    """Tests that the search view returns the expected results."""
+
+    def test_return_code(self):
+        """/search/ url output"""
+        response = self.client.get(reverse('generic-search'))
+        self.assertEqual(response.status_code, status.HTTP_200_OK)

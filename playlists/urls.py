@@ -28,6 +28,10 @@ urlpatterns = [  # pylint: disable=invalid-name
     url(r'^tracks/(?P<pk>[0-9]+)/$',
         views.TrackDetail.as_view(),
         name='track-detail'),
+
+    url(r'^search/$',
+        views.GenericSearch.as_view(),
+        name='generic-search'),
 ]
 
 # pylint: disable=invalid-name
