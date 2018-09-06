@@ -47,14 +47,19 @@ class GenericSearch(ObjectMultipleModelAPIView):
     """Meant to return several querysets, each filtered by the query"""
     pagination_class = LimitPagination
 
-    querylist = [
-        {
-            'queryset': Artist.objects.all(),
-            'serializer_class':
-            ArtistSerializer
-        }, {
-            'queryset': Release.objects.all(),
-            'serializer_class':
-            ReleaseSerializer
-        },
-    ]
+    def get_querylist(self):
+        """Returns a querylist of our own making"""
+        query = getattr(self.request.query_params, 'q', '')
+
+        return (
+            {
+                'queryset': Artist.objects.filter(name__icontains=query),
+                'serializer_class': ArtistSerializer
+            }, {
+                'queryset': Release.objects.filter(title__icontains=query),
+                'serializer_class': ReleaseSerializer
+            }, {
+                'queryset': Track.objects.filter(name__icontains=query),
+                'serializer_class': TrackSerializer
+            }
+        )

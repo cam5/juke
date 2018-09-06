@@ -120,3 +120,29 @@ class SearchView(APITestCase):
         """/search/ url output"""
         response = self.client.get(reverse('generic-search'))
         self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+    def test_all_types_expected(self):
+        """Ensure we see at least placeholders
+        for Release, Artist, and Track"""
+        response = self.client.get(reverse('generic-search'))
+        results = response.json()['results']
+
+        self.assertTrue('Artist' in results)
+        self.assertTrue('Release' in results)
+        self.assertTrue('Track' in results)
+
+    def test_search_query(self):
+        """Given a search query,
+        test that filter does not show unexpected results"""
+
+        response = self.client.get(reverse('generic-search'), {'q': 'Ach'})
+        results = response.json()['results']
+
+        for artist in results['Artist']:
+            self.assertTrue('ach' not in artist.name.lower())
+
+        for release in results['Release']:
+            self.assertTrue('ach' not in release.title.lower())
+
+        for track in results['Track']:
+            self.assertTrue('ach' not in track.name.lower())
