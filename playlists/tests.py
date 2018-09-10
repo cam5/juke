@@ -115,6 +115,7 @@ class EntitiesListViews(APITestCase):
 
 class SearchView(APITestCase):
     """Tests that the search view returns the expected results."""
+    fixtures = ['playlists.json']
 
     def test_return_code(self):
         """/search/ url output"""
@@ -146,3 +147,6 @@ class SearchView(APITestCase):
 
         for track in results['Track']:
             self.assertTrue('ach' not in track.name.lower())
+
+        for obj in ('Artist', 'Release', 'Track'):
+            self.assertTrue(len(results[obj]) > 0)
