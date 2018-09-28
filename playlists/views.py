@@ -49,7 +49,7 @@ class GenericSearch(ObjectMultipleModelAPIView):
 
     def get_querylist(self):
         """Returns a querylist of our own making"""
-        query = getattr(self.request.query_params, 'q', '')
+        query = self.request.query_params.get('q', '')
 
         return (
             {

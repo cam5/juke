@@ -1,5 +1,6 @@
 """Models for the 'playlists' app."""
 from django.db import models
+from jsonfield import JSONField
 
 ARTIST_TYPES = ['Person', 'Group', 'Orchestra', 'Choir', 'Character', 'Other']
 GENDERS = ['Female', 'Male', 'None']
@@ -77,6 +78,7 @@ class Track(models.Model):
     number = models.PositiveSmallIntegerField()
     name = models.CharField(max_length=100)
     length = models.DurationField()
+    stream_sources = JSONField(default=[])
 
     # Omitted fields from MusicBrainz
     # - recording (we'll tie it straight to "release")

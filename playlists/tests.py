@@ -1,9 +1,10 @@
 """Test suite for playlists app"""
-from django.test import TestCase
+from django.test import tag, TestCase
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 from .models import Artist, Release, Track
+from .services.stream_source import scrape_spotify
 
 
 class ArtistModelTest(TestCase):
@@ -55,6 +56,8 @@ class TrackModelTest(TestCase):
         with self.assertRaises(AttributeError):
             release = track.release
             self.assertNotEqual(release, '')
+
+        self.assertTrue(len(track.stream_sources) == 0)
 
 
 class ArtistTrackReleaseRelationshipTestCase(TestCase):
@@ -140,13 +143,28 @@ class SearchView(APITestCase):
         results = response.json()['results']
 
         for artist in results['Artist']:
-            self.assertTrue('ach' not in artist.name.lower())
+            self.assertTrue('ach' in artist['name'].lower())
 
         for release in results['Release']:
-            self.assertTrue('ach' not in release.title.lower())
+            self.assertTrue('ach' in release['title'].lower())
 
         for track in results['Track']:
-            self.assertTrue('ach' not in track.name.lower())
+            self.assertTrue('ach' in track['name'].lower())
 
-        for obj in ('Artist', 'Release', 'Track'):
-            self.assertTrue(len(results[obj]) > 0)
+
+@tag('external')
+class SpotfyIntegration(TestCase):
+    """Tests that we're able to interface reliably with this 3rd party
+    service"""
+    fixtures = ['playlists.json']
+
+    def test_find_matching_data(self):
+        """Straight up query Spotify and see if the data is useful!"""
+        track = Track.objects.all()[0]
+
+        # First test that no stream sources are present.
+        self.assertEqual(track.stream_sources, [])
+
+        result = scrape_spotify(track)
+
+        self.assertEqual(result, "2EoIt9vdgFRNW03u5IvFsQ")  # actual spotify id
