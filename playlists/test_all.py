@@ -2,9 +2,11 @@
 from django.test import tag, TestCase
 from django.urls import reverse
 from rest_framework import status
+from unittest.mock import patch, Mock
 from rest_framework.test import APITestCase
 from .models import Artist, Release, Track
 from .services.stream_source import scrape_spotify
+from .tests.responses import ACHY_BREAKY_DATA
 
 
 class ArtistModelTest(TestCase):
@@ -165,6 +167,8 @@ class SpotfyIntegration(TestCase):
         # First test that no stream sources are present.
         self.assertEqual(track.stream_sources, [])
 
-        result = scrape_spotify(track)
+        with patch('spotipy.client.Spotify.search') as mock_spotify:
+            mock_spotify.return_value = ACHY_BREAKY_DATA
+            result = scrape_spotify(track)
 
         self.assertEqual(result, "2EoIt9vdgFRNW03u5IvFsQ")  # actual spotify id
