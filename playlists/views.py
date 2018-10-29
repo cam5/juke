@@ -1,9 +1,12 @@
 """Views for playlists app"""
 from rest_framework import generics
+from django.http import JsonResponse
 from drf_multiple_model.views import ObjectMultipleModelAPIView
 from .models import Artist, Release, Track
 from .serializers import ArtistSerializer, ReleaseSerializer, TrackSerializer
 from .paginators import LimitPagination
+from .services import musicbrainz
+from urllib.parse import parse_qs
 
 
 class ArtistList(generics.ListCreateAPIView):
@@ -63,3 +66,15 @@ class GenericSearch(ObjectMultipleModelAPIView):
                 'serializer_class': TrackSerializer
             }
         )
+
+
+def external_search(request):
+    """
+    Searches an external database for more data, given a search term.
+    """
+    query = request.GET.get('q')
+
+    return JsonResponse(
+        musicbrainz.search_release_groups(query),
+        status=200
+    )

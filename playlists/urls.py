@@ -29,6 +29,10 @@ urlpatterns = [  # pylint: disable=invalid-name
         views.TrackDetail.as_view(),
         name='track-detail'),
 
+    url(r'^search/external/$',
+        views.external_search,
+        name='external-search'),
+
     url(r'^search/$',
         views.GenericSearch.as_view(),
         name='generic-search'),
