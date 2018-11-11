@@ -1,12 +1,12 @@
 """Test suite for playlists app"""
-from django.test import tag, TestCase
+from django.test import TestCase
 from django.urls import reverse
 from rest_framework import status
-from unittest.mock import patch, Mock
+from unittest.mock import patch
 from rest_framework.test import APITestCase
 from .models import Artist, Release, Track
 from .services.stream_source import scrape_spotify
-from .tests.responses import ACHY_BREAKY_DATA
+from .tests.responses import ACHY_BREAKY_DATA, MB_ARTISTS, MB_RELEASE_GROUPS, MB_SONGS
 
 
 class ArtistModelTest(TestCase):
@@ -154,8 +154,7 @@ class SearchView(APITestCase):
             self.assertTrue('ach' in track['name'].lower())
 
 
-@tag('external')
-class SpotfyIntegration(TestCase):
+class SpotifyIntegration(TestCase):
     """Tests that we're able to interface reliably with this 3rd party
     service"""
     fixtures = ['playlists.json']
@@ -172,3 +171,22 @@ class SpotfyIntegration(TestCase):
             result = scrape_spotify(track)
 
         self.assertEqual(result, "2EoIt9vdgFRNW03u5IvFsQ")  # actual spotify id
+
+
+class MusicBrainzSearch(TestCase):
+    """
+    Runs a basic test on how the app should treat a response from MusicBrainz's
+    lucene search server
+    """
+    def test_query_for_billy(self):
+        query = 'Achy'
+
+        patch('musicbrainzngs.search_artists', return_value=MB_ARTISTS)
+        patch('musicbrainzngs.search_works', return_value=MB_SONGS)
+        patch('musicbrainzngs.search_release_groups',
+               return_value=MB_RELEASE_GROUPS)
+
+        response = self.client.get(reverse('external-search'), {'q': query})
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+

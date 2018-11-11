@@ -6,7 +6,6 @@ from .models import Artist, Release, Track
 from .serializers import ArtistSerializer, ReleaseSerializer, TrackSerializer
 from .paginators import LimitPagination
 from .services import musicbrainz
-from urllib.parse import parse_qs
 
 
 class ArtistList(generics.ListCreateAPIView):
@@ -75,6 +74,6 @@ def external_search(request):
     query = request.GET.get('q')
 
     return JsonResponse(
-        musicbrainz.search_release_groups(query),
+        musicbrainz.generic_search(query),
         status=200
     )
