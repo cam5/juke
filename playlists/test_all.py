@@ -1,4 +1,5 @@
 """Test suite for playlists app"""
+import json
 from django.test import TestCase
 from django.urls import reverse
 from rest_framework import status
@@ -178,15 +179,21 @@ class MusicBrainzSearch(TestCase):
     Runs a basic test on how the app should treat a response from MusicBrainz's
     lucene search server
     """
-    def test_query_for_billy(self):
+    @patch('musicbrainzngs.search_works')
+    @patch('musicbrainzngs.search_artists')
+    @patch('musicbrainzngs.search_release_groups')
+    def test_query_for_billy(self, release_groups_search, artists_search,
+                             works_search):
         query = 'Achy'
 
-        patch('musicbrainzngs.search_artists', return_value=MB_ARTISTS)
-        patch('musicbrainzngs.search_works', return_value=MB_SONGS)
-        patch('musicbrainzngs.search_release_groups',
-               return_value=MB_RELEASE_GROUPS)
+        artists_search.return_value = MB_ARTISTS
+        works_search.return_value = MB_SONGS
+        release_groups_search.return_value = MB_RELEASE_GROUPS
 
         response = self.client.get(reverse('external-search'), {'q': query})
+        response_dict = json.loads(response.content)
+        achy_breaky_release = """{"title":"Achy Breaky Heart","mbid":"c545f1b2-e205-3c68-a08f-33a6b67b827f","artist":"Billy Ray Cyrus"}"""
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertDictContainsSubset({'Artist': []}, response_dict)
 
