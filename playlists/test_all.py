@@ -192,8 +192,11 @@ class MusicBrainzSearch(TestCase):
 
         response = self.client.get(reverse('external-search'), {'q': query})
         response_dict = json.loads(response.content)
-        achy_breaky_release = """{"title":"Achy Breaky Heart","mbid":"c545f1b2-e205-3c68-a08f-33a6b67b827f","artist":"Billy Ray Cyrus"}"""
+        achy_breaky_release_mbid = "c545f1b2-e205-3c68-a08f-33a6b67b827f"
+        # @TODO - ideally, we'd test for a matching fragment..
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertDictContainsSubset({'Artist': []}, response_dict)
+
+        self.assertContains(response, achy_breaky_release_mbid)
 
