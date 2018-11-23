@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import url
 
 # pylint: disable=invalid-name
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('playlists.urls'))
+    path('', include('playlists.urls')),
+    url(r'^carrot/', include('carrot.urls')),  # Maybe we don't always want
+                                               # this... but for now... :)
 ]

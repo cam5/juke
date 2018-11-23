@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+from carrot import DEFAULT_BROKER
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'drf_multiple_model',
+    'carrot',
     'playlists'
 ]
 
@@ -53,6 +55,11 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'juke.urls'
+
+CARROT = {
+    'task_modules': ['playlists.tasks'],
+    'default_broker': DEFAULT_BROKER,
+}
 
 TEMPLATES = [
     {
