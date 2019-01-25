@@ -1,13 +1,16 @@
 """Test suite for playlists app"""
 import json
-from django.test import TestCase
+from django.test import TestCase, tag
 from django.urls import reverse
 from rest_framework import status
 from unittest.mock import patch
 from rest_framework.test import APITestCase
 from .models import Artist, Release, Track
 from .services.stream_source import scrape_spotify
-from .tests.responses import ACHY_BREAKY_DATA, MB_ARTISTS, MB_RELEASE_GROUPS, MB_SONGS
+from .services import musicbrainz
+from .tasks import scrape_release_group
+from .tests.responses import (ACHY_BREAKY_DATA, MB_ARTISTS,
+                              MB_RELEASE_GROUPS, MB_SONGS)
 
 
 class ArtistModelTest(TestCase):
@@ -32,10 +35,8 @@ class ReleaseModelTest(TestCase):
         release = Release()
 
         for blank in ('title', 'country', 'label', 'catalogue_number',
-                      'barcode', 'status', 'mbid'):
+                      'barcode', 'status', 'mbid', 'date'):
             self.assertIs(getattr(release, blank), '')
-
-        self.assertIs(release.date, None)
 
         # We say this should be an "AttributeError", because
         # the RelatedObjectDoesNotExist error that extends this is created
@@ -200,3 +201,27 @@ class MusicBrainzSearch(TestCase):
 
         self.assertContains(response, achy_breaky_release_mbid)
 
+        """
+        Given a release-*group*, external-search should filter
+        1st, for "Album"-, "Single"-, and "EP"-type Release Groups, and
+        2nd, the "Official"-type Release objects contained therein.
+        """
+        # @TODO ^
+
+
+class ScrapeReleaseAndTracksTask(TestCase):
+    """
+    Given a Release-Group Response from external-search, it will run through
+    and scrape Artist and Release data by MBIDs, passing them to this
+    scrape-task!
+    """
+
+    @tag('task')
+    @patch('musicbrainzngs.search_release_groups')
+    def test_release_group_scrape(self, release_groups_search):
+        """
+        Tests that we call out to MusicBrainz to get supplementary data.
+        """
+        release_groups_search.return_value = MB_RELEASE_GROUPS
+
+        scrape_release_group(MB_RELEASE_GROUPS.get('release-group-list'))

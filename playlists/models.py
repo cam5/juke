@@ -17,11 +17,11 @@ class Artist(models.Model):
     fictional character."""
     name = models.CharField(max_length=100)
     sort_name = models.CharField(max_length=100)
-    type = models.CharField(ARTIST_TYPE_CHOICES, max_length=100)
+    type = models.CharField(ARTIST_TYPE_CHOICES, max_length=100, null=True)
     gender = models.CharField(GENDER_CHOICES, max_length=6, default='None')
     area = models.CharField(blank=True, max_length=100)
-    begin = models.DateTimeField(blank=True)
-    end = models.DateTimeField(blank=True)
+    begin = models.DateTimeField(null=True)
+    end = models.DateTimeField(null=True)
     alias = models.CharField(blank=True, max_length=100)
     mbid = models.CharField(blank=True, max_length=100)
 
@@ -48,11 +48,11 @@ class Release(models.Model):
     album or single, they are each represented as one release."""
     title = models.CharField(max_length=100)
     artist = models.ForeignKey('Artist', on_delete=models.CASCADE)
-    date = models.DateTimeField(blank=True)
+    date = models.CharField(max_length=100)
     country = models.CharField(max_length=100)
     label = models.CharField(max_length=100)
     catalogue_number = models.CharField(max_length=100)
-    barcode = models.CharField(max_length=100)
+    barcode = models.CharField(max_length=100, null=True)
     status = models.CharField(RELEASE_TYPE_CHOICES, max_length=14)
     mbid = models.CharField(blank=True, max_length=100)
 
@@ -79,6 +79,7 @@ class Track(models.Model):
     name = models.CharField(max_length=100)
     length = models.DurationField()
     stream_sources = JSONField(default=[])
+    mbid = models.CharField(blank=True, max_length=100)
 
     # Omitted fields from MusicBrainz
     # - recording (we'll tie it straight to "release")

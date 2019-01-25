@@ -3,6 +3,8 @@ Handles configuration of musicbrainz wrapper
 """
 import os
 import musicbrainzngs
+from playlists.tasks import scrape_release_group, scrape_artist, scrape_track
+from carrot.utilities import publish_message
 
 musicbrainzngs.set_useragent(
     os.environ.get('MUSICBRAINZ_USER_AGENT'),
@@ -50,8 +52,29 @@ def generic_search(q, limit=3):
     works = musicbrainzngs.search_works(
         work=q, limit=limit, strict=True).get('work-list')
 
+    dispatch_scrapers(artists=artists,
+                      release_groups=release_groups,
+                      tracks=works)
+
     return {
         'Artist': [artist_filter(a) for a in artists],
         'Release': [release_group_filter(r) for r in release_groups],
         'Tracks': [work_filter(w) for w in works]
     }
+
+
+def search_release(mbid, **kwargs):
+    """Look up a release by MBID"""
+    return musicbrainzngs.get_release_by_id(mbid, **kwargs)
+
+
+def search_artist(mbid, **kwargs):
+    """Look up an artist by MBID"""
+    return musicbrainzngs.get_artist_by_id(mbid, **kwargs)
+
+
+def dispatch_scrapers(artists, release_groups, tracks):
+    publish_message(scrape_release_group, release_groups)
+
+    for a in artists:
+        publish_message(scrape_artist, a)
