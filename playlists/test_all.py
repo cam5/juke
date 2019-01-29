@@ -7,7 +7,7 @@ from unittest.mock import patch
 from rest_framework.test import APITestCase
 from .models import Artist, Release, Track
 from .services.stream_source import scrape_spotify
-from .services import musicbrainz
+from .services import musicbrainz  # Appears redundant but avoids circular dep
 from .tasks import scrape_release_group
 from .tests.responses import (ACHY_BREAKY_DATA, MB_ARTISTS,
                               MB_RELEASE_GROUPS, MB_SONGS)
@@ -19,10 +19,10 @@ class ArtistModelTest(TestCase):
         """Artist should instantiate with predictable values"""
         artist = Artist()
 
-        for blank in ('name', 'type', 'sort_name', 'area', 'alias', 'mbid'):
+        for blank in ('name', 'sort_name', 'area', 'alias', 'mbid'):
             self.assertIs(getattr(artist, blank), '')
 
-        for none in ('begin', 'end'):
+        for none in ('type', 'begin', 'end'):
             self.assertIs(getattr(artist, none), None)
 
         self.assertIs(artist.gender, 'None')
@@ -35,8 +35,10 @@ class ReleaseModelTest(TestCase):
         release = Release()
 
         for blank in ('title', 'country', 'label', 'catalogue_number',
-                      'barcode', 'status', 'mbid', 'date'):
+                      'status', 'mbid', 'date'):
             self.assertIs(getattr(release, blank), '')
+
+        self.assertIs(getattr(release, 'barcode'), None)
 
         # We say this should be an "AttributeError", because
         # the RelatedObjectDoesNotExist error that extends this is created
