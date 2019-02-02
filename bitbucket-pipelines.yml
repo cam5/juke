@@ -5,3 +5,13 @@ pipelines:
         script:
           - pip install -r requirements.txt
           - python manage.py test
+
+definitions:
+  services:
+    rabbitmq:
+      image: rabbitmq
+      environment:
+        RABBITMQ_ERLANG_COOKIE: "FDASFASAFDASFWEFGSDF"
+        RABBITMQ_DEFAULT_USER: "guest"
+        RABBITMQ_DEFAULT_PASS: "guest"
+        RABBITMQ_DEFAULT_VHOST: "/"
