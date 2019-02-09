@@ -129,9 +129,9 @@ def scrape_artist(artist_mbid):
     life_span = r.get('life-span', {})
 
     if (life_span.get('begin', False)):
-        artist.begin = datetime.strptime(life_span.get('begin'), '%Y-%m-%d')
+        artist.begin = musicbrainz.date_to_timezone_aware(life_span.get('begin'))
     if (life_span.get('ended', False)):
-        artist.end = datetime.strptime(life_span.get('end'), '%Y-%m-%d')
+        artist.end = musicbrainz.date_to_timezone_aware(life_span.get('end'))
 
     artist.gender = r.get('gender', '')
     artist.mbid = r.get('mbid', artist_mbid)

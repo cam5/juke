@@ -5,6 +5,7 @@ import os
 import musicbrainzngs
 from playlists.tasks import scrape_release_group, scrape_artist, scrape_track
 from carrot.utilities import publish_message
+from datetime import datetime
 
 musicbrainzngs.set_useragent(
     os.environ.get('MUSICBRAINZ_USER_AGENT'),
@@ -35,6 +36,17 @@ def work_filter(data):
         'title': data.get('title'),
         'mbid': data.get('id'),
     }
+
+
+def date_to_timezone_aware(ymd_string):
+    """
+    Takes a string of the format ymd_string and puts it into a midnight@utc
+    format so that the db doesn't complain.
+    """
+    return datetime.strptime(
+        '{} 00:00:00+00:00'.format(ymd_string),
+        '%Y-%m-%d %H:%M:%S%z'
+    )
 
 
 def generic_search(q, limit=3):
