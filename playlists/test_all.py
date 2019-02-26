@@ -9,6 +9,7 @@ from .models import Artist, Release, Track
 from .services.stream_source import scrape_spotify
 from .services import musicbrainz  # Appears redundant but avoids circular dep
 from .tasks import scrape_release_group
+from .tests import musicbrainz_mock
 from .tests.responses import (ACHY_BREAKY_DATA, MB_ARTISTS,
                               MB_RELEASE_GROUPS, MB_SONGS)
 
@@ -219,11 +220,10 @@ class ScrapeReleaseAndTracksTask(TestCase):
     """
 
     @tag('task')
-    @patch('musicbrainzngs.search_release_groups')
-    def test_release_group_scrape(self, release_groups_search):
+    @patch('musicbrainzngs.musicbrainz._mb_request',
+           musicbrainz_mock._mb_request)
+    def test_release_group_scrape(self):
         """
         Tests that we call out to MusicBrainz to get supplementary data.
         """
-        release_groups_search.return_value = MB_RELEASE_GROUPS
-
         scrape_release_group(MB_RELEASE_GROUPS.get('release-group-list'))

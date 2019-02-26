@@ -82,7 +82,7 @@ def scrape_release(artist_mbid, release_mbid):
         release.mbid = release_mbid
 
         r = musicbrainz.search_release(
-                release_mbid, includes=["recordings"]
+            release_mbid, includes=["recordings"]
         ).get('release', {})
 
         release.title = r.get('title')
@@ -105,13 +105,10 @@ def scrape_release(artist_mbid, release_mbid):
 
         scrape_release_tracks(r, release)
 
-    # artist = models.ForeignKey('Artist', on_delete=models.CASCADE)
     # country = models.CharField(max_length=100)
-    # label = models.CharField(max_length=100)
     # catalogue_number = models.CharField(max_length=100)
     # barcode = models.CharField(max_length=100)
     # status = models.CharField(RELEASE_TYPE_CHOICES, max_length=14)
-    # mbid = models.CharField(blank=True, max_length=100)
 
 
 def scrape_artist(artist_mbid):
@@ -146,14 +143,30 @@ def scrape_artist(artist_mbid):
 
 
 def scrape_track(track, release):
+    """
+    Example data for `track`:
+        {
+            "id": "f2a3c13d-a8d1-3233-9aa6-c8bd23d0f355",
+            "length": "140826",
+            "number": "1",
+            "position": "1",
+            "recording": {
+                "id": "c1736701-0273-414b-a3c6-1bc0e968da0a",
+                "length": "140826",
+                "title": "Rockin' Bones"
+            },
+            "track_or_recording_length": "140826"
+        }
+    """
+
     try:
         track = Track.objects.get(mbid=track.get('id'))
     except ObjectDoesNotExist:
         new_track = Track()
-        new_track.id = track.get('mbid')
+        new_track.mbid = track.get('id')
         new_track.number = track.get('number')
-        new_track.length = timedelta(seconds=int(track.get('length')))
-        new_track.title = track.get('recording', {}).get('id', '')
+        new_track.length = timedelta(milliseconds=int(track.get('length')))
+        new_track.name = track.get('recording', {}).get('title', '')
         new_track.release = release
 
         new_track.save()
