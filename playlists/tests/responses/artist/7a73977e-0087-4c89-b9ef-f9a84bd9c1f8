@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata
+	xmlns="http://musicbrainz.org/ns/mmd-2.0#">
+	<artist id="7a73977e-0087-4c89-b9ef-f9a84bd9c1f8">
+		<name>Stef Carse</name>
+		<sort-name>Stef Carse</sort-name>
+		<recording-list count="22">
+			<recording id="0f703d9b-b6bc-467f-beb0-a8ba280a5b51">
+				<title>Bye Bye</title>
+				<length>223000</length>
+			</recording>
+			<recording id="1be75ccd-273f-4be9-bf2b-c49bd45c45b6">
+				<title>Rebelle</title>
+				<length>211866</length>
+			</recording>
+			<recording id="1db20e2a-19f8-453e-ae7c-5b028e58cf59">
+				<title>Tout changer</title>
+				<length>197000</length>
+			</recording>
+			<recording id="2580b651-706c-43bf-9c14-3e63af2d94ff">
+				<title>J'attends ton retour</title>
+				<length>245000</length>
+			</recording>
+			<recording id="286fcff9-b766-4e9d-b984-dfc45f136d0d">
+				<title>Clap Your Hands</title>
+				<length>118000</length>
+			</recording>
+			<recording id="3aea77fc-9f28-4170-b153-091babb308db">
+				<title>Just a Little Lovin'</title>
+				<length>296800</length>
+			</recording>
+			<recording id="4e063ac8-17f6-4b91-89ed-2203942153c6">
+				<title>Burning Love</title>
+				<length>203466</length>
+			</recording>
+			<recording id="5c4bc60d-1e43-4fb0-a329-dfd6fd54dcaa">
+				<title>Comme je suis</title>
+				<length>271440</length>
+			</recording>
+			<recording id="6f2ceaed-aad5-4350-9544-0740f0547c21">
+				<title>Suspicious Minds</title>
+				<length>241760</length>
+			</recording>
+			<recording id="83c30eab-3c12-488e-b07a-67f023847293">
+				<title>Elle Est My Love</title>
+				<length>214493</length>
+			</recording>
+			<recording id="91e909da-1d85-4ae6-8b84-7ab5266c6198">
+				<title>Miroir Miroir</title>
+				<length>248160</length>
+			</recording>
+			<recording id="9656bdef-05e9-422e-b1e0-24a53e1a3e3e">
+				<title>Sara</title>
+				<length>251306</length>
+			</recording>
+			<recording id="a254d3af-2543-428c-8994-2be9783109b8">
+				<title>Amazing Grace</title>
+				<length>193000</length>
+			</recording>
+			<recording id="ac4801fe-922e-47ae-9e84-a48ffd60387d">
+				<title>Reach Out for Freedom</title>
+				<length>233400</length>
+			</recording>
+			<recording id="add66a6a-a700-4d62-af18-8edad139fb26">
+				<title>Les larmes du ciel</title>
+				<length>215000</length>
+			</recording>
+			<recording id="af683345-dda5-4954-8ee3-f5bfaabc8b60">
+				<title>Un dernier slow</title>
+				<length>237000</length>
+			</recording>
+			<recording id="ddc9adc2-dabc-4f1a-ae7d-1a07f4b33eff">
+				<title>Le Boot Scootin' Boogie</title>
+				<length>193000</length>
+			</recording>
+			<recording id="dea6207e-6994-4a5a-a17c-d0c7c1b043e4">
+				<title>Achy Breaky Danse (remix)</title>
+				<length>455000</length>
+			</recording>
+			<recording id="e40c894d-35c2-43c0-a664-be793d2be517">
+				<title>Goodbye</title>
+				<length>240840</length>
+			</recording>
+			<recording id="e75da58b-70bc-4b56-8c91-3282f22442af">
+				<title>C'est toi et moi</title>
+				<length>215000</length>
+			</recording>
+			<recording id="f73c88ac-ae14-4e10-8fc1-dbd71c14a9b7">
+				<title>Seul sur la terre</title>
+				<length>209000</length>
+			</recording>
+			<recording id="fad9dc0e-f223-4a4d-bdc1-ec91d9ca61a4">
+				<title>Achy Breaky Danse</title>
+				<length>204866</length>
+			</recording>
+		</recording-list>
+	</artist>
+</metadata>

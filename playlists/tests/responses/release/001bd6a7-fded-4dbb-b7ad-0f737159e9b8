@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata
+	xmlns="http://musicbrainz.org/ns/mmd-2.0#">
+	<release id="6d53034f-4e3d-4150-9ccf-08ff406e9d7a">
+		<title>Achy Breaky Heart</title>
+		<status id="4e304316-386d-3409-af2e-78857eec5cfe">Official</status>
+		<quality>normal</quality>
+		<text-representation>
+			<language>eng</language>
+			<script>Latn</script>
+		</text-representation>
+		<date>1996-02-09</date>
+		<country>US</country>
+		<release-event-list count="1">
+			<release-event>
+				<date>1996-02-09</date>
+				<area id="489ce91b-6658-3307-9877-795b68554c98">
+					<name>United States</name>
+					<sort-name>United States</sort-name>
+					<iso-3166-1-code-list>
+						<iso-3166-1-code>US</iso-3166-1-code>
+					</iso-3166-1-code-list>
+				</area>
+			</release-event>
+		</release-event-list>
+		<asin>B000000L4D</asin>
+		<cover-art-archive>
+			<artwork>false</artwork>
+			<count>0</count>
+			<front>false</front>
+			<back>false</back>
+		</cover-art-archive>
+		<medium-list count="1">
+			<medium>
+				<position>1</position>
+				<track-list count="12" offset="0">
+					<track id="f2a3c13d-a8d1-3233-9aa6-c8bd23d0f355">
+						<position>1</position>
+						<number>1</number>
+						<length>140826</length>
+						<recording id="c1736701-0273-414b-a3c6-1bc0e968da0a">
+							<title>Rockin\' Bones</title>
+							<length>140826</length>
+						</recording>
+					</track>
+					<track id="67ac89c3-6f9b-3928-8590-1c533ec98fae">
+						<position>2</position>
+						<number>2</number>
+						<length>140066</length>
+						<recording id="596ee8a0-42f3-4ceb-9c7d-989786e13a0c">
+							<title>Sally Let Your Bangs Hang Down</title>
+							<length>140066</length>
+						</recording>
+					</track>
+					<track id="a87e996c-b7ba-33f1-a6d3-470e9968349d">
+						<position>3</position>
+						<number>3</number>
+						<length>156906</length>
+						<recording id="4ee7e707-197b-4f53-bee9-3f4c220b3016">
+							<title>Train Of Love</title>
+							<length>156906</length>
+						</recording>
+					</track>
+					<track id="7267d91d-ae12-3ae1-be1e-87ce98d758a4">
+						<position>4</position>
+						<number>4</number>
+						<length>164760</length>
+						<recording id="fedbb27e-20de-4e52-9e03-82feb04179e9">
+							<title>Mabelline</title>
+							<length>164760</length>
+						</recording>
+					</track>
+					<track id="76890d45-71b0-351b-8f31-8f600cdc8cb1">
+						<position>5</position>
+						<number>5</number>
+						<length>137506</length>
+						<recording id="3cf4e2d7-62f8-405b-bef4-0cb58914f9cb">
+							<title>Thats All Right</title>
+							<length>137506</length>
+						</recording>
+					</track>
+					<track id="c087986c-4dd4-3f12-b371-9cc2b9e5b33e">
+						<position>6</position>
+						<number>6</number>
+						<length>160693</length>
+						<recording id="4c5941c7-9dd3-40ea-a12c-b4c73f68cc22">
+							<title>Sixteen Chickens and a Tambourine</title>
+							<length>160693</length>
+						</recording>
+					</track>
+					<track id="74ef3fbf-dfb1-39e2-b751-3dd2341945f1">
+						<position>7</position>
+						<number>7</number>
+						<length>171373</length>
+						<recording id="0bdbc039-3cc3-4e66-a2d4-1b47604a7684">
+							<title>Mystery Train</title>
+							<length>171373</length>
+						</recording>
+					</track>
+					<track id="bff366f2-e5b5-3db0-b9ed-c42524fc9931">
+						<position>8</position>
+						<number>8</number>
+						<length>161400</length>
+						<recording id="3d25db1a-6ded-4e2b-b3d2-74ba77741863">
+							<title>Pipeliner Blues</title>
+							<length>161400</length>
+						</recording>
+					</track>
+					<track id="b8006dd4-9e4b-378f-9784-37cf0063c8c2">
+						<position>9</position>
+						<number>9</number>
+						<length>149733</length>
+						<recording id="7979860b-6f7c-40a8-b799-d929fcc030fa">
+							<title>No Help Wanted</title>
+							<length>149733</length>
+						</recording>
+					</track>
+					<track id="f96c7b87-7368-3e18-94fa-2570559fac0f">
+						<position>10</position>
+						<number>10</number>
+						<length>187933</length>
+						<recording id="3775d581-3d59-41a3-aee2-1ca4af1b4196">
+							<title>Haunted House</title>
+							<length>187933</length>
+						</recording>
+					</track>
+					<track id="d6ecea10-d435-3efa-b6ae-fbd769d60b8d">
+						<position>11</position>
+						<number>11</number>
+						<length>125200</length>
+						<recording id="a71b4e2c-b6a5-42f0-b9ef-c3eae5eedb57">
+							<title>Hank, You\'re Like Your Daddy</title>
+							<length>125200</length>
+						</recording>
+					</track>
+					<track id="6fdd5a2e-3a78-3f1c-9e8d-0756e24671b8">
+						<position>12</position>
+						<number>12</number>
+						<length>166600</length>
+						<recording id="b8841644-665e-4269-93d4-93e3e11a50d8">
+							<title>Achy Breaky Heart</title>
+							<length>166600</length>
+						</recording>
+					</track>
+				</track-list>
+			</medium>
+		</medium-list>
+	</release>
+</metadata>

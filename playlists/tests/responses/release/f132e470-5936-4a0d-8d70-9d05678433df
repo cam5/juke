@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata
+	xmlns="http://musicbrainz.org/ns/mmd-2.0#">
+	<release id="f132e470-5936-4a0d-8d70-9d05678433df">
+		<title>Achy Breaky Danse</title>
+		<status id="4e304316-386d-3409-af2e-78857eec5cfe">Official</status>
+		<quality>normal</quality>
+		<text-representation>
+			<language>mul</language>
+			<script>Latn</script>
+		</text-representation>
+		<date>1993</date>
+		<country>CA</country>
+		<release-event-list count="1">
+			<release-event>
+				<date>1993</date>
+				<area id="71bbafaa-e825-3e15-8ca9-017dcad1748b">
+					<name>Canada</name>
+					<sort-name>Canada</sort-name>
+					<iso-3166-1-code-list>
+						<iso-3166-1-code>CA</iso-3166-1-code>
+					</iso-3166-1-code-list>
+				</area>
+			</release-event>
+		</release-event-list>
+		<barcode />
+		<asin>B00002DDJV</asin>
+		<cover-art-archive>
+			<artwork>true</artwork>
+			<count>1</count>
+			<front>true</front>
+			<back>false</back>
+		</cover-art-archive>
+		<medium-list count="1">
+			<medium>
+				<position>1</position>
+				<format id="907a28d9-b3b2-3ef6-89a8-7b18d91d4794">Digital Media</format>
+				<track-list offset="0" count="11">
+					<track id="26bc7708-fcbe-38cf-bb32-c8e395fe4557">
+						<position>1</position>
+						<number>1</number>
+						<length>204866</length>
+						<recording id="fad9dc0e-f223-4a4d-bdc1-ec91d9ca61a4">
+							<title>Achy Breaky Danse</title>
+							<length>204866</length>
+						</recording>
+					</track>
+					<track id="e2bd3cf5-9bbe-3952-bd78-b0662b3c50a3">
+						<position>2</position>
+						<number>2</number>
+						<length>214493</length>
+						<recording id="83c30eab-3c12-488e-b07a-67f023847293">
+							<title>Elle Est My Love</title>
+							<length>214493</length>
+						</recording>
+					</track>
+					<track id="0501b5af-e5a1-31c8-9122-807bf32ce340">
+						<position>3</position>
+						<number>3</number>
+						<length>251306</length>
+						<recording id="9656bdef-05e9-422e-b1e0-24a53e1a3e3e">
+							<title>Sara</title>
+							<length>251306</length>
+						</recording>
+					</track>
+					<track id="8690f03b-6858-35f5-aa2a-342d67bd095c">
+						<position>4</position>
+						<number>4</number>
+						<length>241760</length>
+						<recording id="6f2ceaed-aad5-4350-9544-0740f0547c21">
+							<title>Suspicious Minds</title>
+							<length>241760</length>
+						</recording>
+					</track>
+					<track id="ef4798e8-8806-3ae7-86f4-54773010a174">
+						<position>5</position>
+						<number>5</number>
+						<length>296800</length>
+						<recording id="3aea77fc-9f28-4170-b153-091babb308db">
+							<title>Just a Little Lovin'</title>
+							<length>296800</length>
+						</recording>
+					</track>
+					<track id="85431cf8-63b6-36b4-b76d-ad73a977b110">
+						<position>6</position>
+						<number>6</number>
+						<length>271440</length>
+						<recording id="5c4bc60d-1e43-4fb0-a329-dfd6fd54dcaa">
+							<title>Comme je suis</title>
+							<length>271440</length>
+						</recording>
+					</track>
+					<track id="9b00500b-f8bd-3001-a7e5-fc718edc9be8">
+						<position>7</position>
+						<number>7</number>
+						<length>248160</length>
+						<recording id="91e909da-1d85-4ae6-8b84-7ab5266c6198">
+							<title>Miroir Miroir</title>
+							<length>248160</length>
+						</recording>
+					</track>
+					<track id="3626539f-1612-396c-9d3f-a67feae4848a">
+						<position>8</position>
+						<number>8</number>
+						<length>211866</length>
+						<recording id="1be75ccd-273f-4be9-bf2b-c49bd45c45b6">
+							<title>Rebelle</title>
+							<length>211866</length>
+						</recording>
+					</track>
+					<track id="0d93ff13-8591-3cf3-a5e7-75480359037b">
+						<position>9</position>
+						<number>9</number>
+						<length>203466</length>
+						<recording id="4e063ac8-17f6-4b91-89ed-2203942153c6">
+							<title>Burning Love</title>
+							<length>203466</length>
+						</recording>
+					</track>
+					<track id="55b87084-38e7-3862-a577-658112a4c3af">
+						<position>10</position>
+						<number>10</number>
+						<length>240840</length>
+						<recording id="e40c894d-35c2-43c0-a664-be793d2be517">
+							<title>Goodbye</title>
+							<length>240840</length>
+						</recording>
+					</track>
+					<track id="698fc55a-6cb4-3655-aa4b-7f9bb6395751">
+						<position>11</position>
+						<number>11</number>
+						<length>455000</length>
+						<recording id="dea6207e-6994-4a5a-a17c-d0c7c1b043e4">
+							<title>Achy Breaky Danse (remix)</title>
+							<length>455000</length>
+						</recording>
+					</track>
+				</track-list>
+			</medium>
+		</medium-list>
+	</release>
+</metadata>

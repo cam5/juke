@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata
+	xmlns="http://musicbrainz.org/ns/mmd-2.0#">
+	<artist type="Person" type-id="b6e035f4-3ce9-331c-97df-83397230b0df" id="63e8d6f9-e247-45c9-aaf2-e079cddbdd54">
+		<name>Billy Ray Cyrus</name>
+		<sort-name>Cyrus, Billy Ray</sort-name>
+		<isni-list>
+			<isni>0000000078397803</isni>
+		</isni-list>
+		<gender id="36d3d30a-839d-3eda-8cb3-29be4384e4a9">Male</gender>
+		<country>US</country>
+		<area id="489ce91b-6658-3307-9877-795b68554c98">
+			<name>United States</name>
+			<sort-name>United States</sort-name>
+			<iso-3166-1-code-list>
+				<iso-3166-1-code>US</iso-3166-1-code>
+			</iso-3166-1-code-list>
+		</area>
+		<begin-area id="2f01beea-d788-4bf9-a72f-1982ad37935a">
+			<name>Flatwoods</name>
+			<sort-name>Flatwoods</sort-name>
+		</begin-area>
+		<life-span>
+			<begin>1961-08-25</begin>
+		</life-span>
+	</artist>
+</metadata>

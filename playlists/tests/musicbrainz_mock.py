@@ -8,9 +8,12 @@ class AUTH_NO:
 def _mb_request(path, method='GET', auth_required=AUTH_NO,
                 client_required=False, args=None, data=None, body=None):
 
-    response_path = '%s/%s/%s'.format(
-        os.path.dirname(__file__), 'responses', path)
+    PLAYLISTS_TESTS_DIR = os.path.abspath(os.path.dirname(__file__))
 
-    if (os.is_file(response_path)):
+    response_path = os.path.join(PLAYLISTS_TESTS_DIR, 'responses', path)
+
+    if (os.path.exists(response_path)):
         with open(response_path, 'r') as content:
-            return musicbrainzngs.mb_parser_xml(content.read())
+            xml = content.read()
+            return musicbrainzngs.mb_parser_xml(xml)
+
