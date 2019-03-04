@@ -2,7 +2,7 @@
 from .services import musicbrainz
 from .models import Artist, Release, Track
 from django.core.exceptions import ObjectDoesNotExist
-from datetime import datetime, timedelta
+from datetime import timedelta
 
 
 def scrape_release_group(data):

@@ -1,6 +1,7 @@
 import musicbrainzngs
 import os
 
+
 class AUTH_NO:
     pass
 
@@ -16,4 +17,3 @@ def _mb_request(path, method='GET', auth_required=AUTH_NO,
         with open(response_path, 'r') as content:
             xml = content.read()
             return musicbrainzngs.mb_parser_xml(xml)
-
