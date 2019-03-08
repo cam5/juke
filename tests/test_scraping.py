@@ -3,7 +3,7 @@ from django.test import TestCase, tag
 from unittest.mock import patch
 from playlists.services import musicbrainz  # Appears redundant but avoids circular dep
 from playlists.services.stream_source import scrape_spotify
-from playlists.models import Track
+from playlists.models import Artist, Release, Track
 from playlists.tasks import scrape_release_group
 from playlists.tests import musicbrainz_mock
 from playlists.tests.responses import (ACHY_BREAKY_DATA, MB_RELEASE_GROUPS)
@@ -41,5 +41,46 @@ class ScrapeReleaseAndTracksTask(TestCase):
     def test_release_group_scrape(self):
         """
         Tests that we call out to MusicBrainz to get supplementary data.
+
+        MB_RELEASE_GROUPS is a response from the query to musicbrainz API for
+        release-groups matching the query "Achy Breaky Heart"
+
+        It yeilds the following:
+        "release-groups-list":
+          -
+          ...
+            "artist-credit":
+              -
+                artist:
+                  name: "Billy Ray Cyrus"
+                  id: 63e8d6f9-e247-45c9-aaf2-e079cddbdd54
+            "release-list":
+              title: "Achy Breaky Heart"
+              id: 001bd6a7-fded-4dbb-b7ad-0f737159e9b8
+          ...
         """
-        scrape_release_group(MB_RELEASE_GROUPS.get('release-group-list'))
+        release_groups = MB_RELEASE_GROUPS.get('release-group-list')
+
+        scrape_release_group(release_groups)
+
+        """
+        We are expecting it to scrape not only the main release from the
+        release-group documented in the comments above, but also a number
+        of other releases, tracks, and artists.
+
+        @see playlists/tests/responses/**/*
+        """
+
+        expected_artists = [rg
+                            .get('artist-credit', {})[0]
+                            .get('artist')
+                            for rg in release_groups
+                            ]
+
+        for artist in expected_artists:
+            db_artist = Artist.objects.get(mbid=artist.get('id'))
+            self.assertEqual(db_artist.mbid, artist.get('id'))
+            self.assertEqual(db_artist.name, artist.get('name'))
+
+            db_artist_releases = Release.objects.get(artist=db_artist)
+            self.assertIsNotNone(db_artist_releases)
