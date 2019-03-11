@@ -74,8 +74,7 @@ class ScrapeReleaseAndTracksTask(TestCase):
         expected_artists = [rg
                             .get('artist-credit', {})[0]
                             .get('artist')
-                            for rg in release_groups
-                            ]
+                            for rg in release_groups]
 
         for artist in expected_artists:
             db_artist = Artist.objects.get(mbid=artist.get('id'))
@@ -84,3 +83,24 @@ class ScrapeReleaseAndTracksTask(TestCase):
 
             db_artist_releases = Release.objects.get(artist=db_artist)
             self.assertIsNotNone(db_artist_releases)
+
+        """
+        Distinct from release groups, we grab the first "Official" release we
+        find.
+        """
+        release_lists = [rg.get('release-list', {}) for rg in release_groups]
+        expected_releases = [
+            (lambda rl: [r for r in rl if r.get('status') == "Official"])(rl)
+            [0]  # Take only the first Official
+            for rl in release_lists
+        ]
+
+        for release in expected_releases:
+            db_release = Release.objects.get(mbid=release.get('id'))
+            self.assertEqual(db_release.mbid, release.get('id'))
+            self.assertEqual(db_release.title, release.get('title'))
+
+            self.assertIsNotNone(db_release.artist)
+
+            db_tracks = Track.objects.filter(release=db_release)
+            self.assertIsNotNone(db_tracks)
