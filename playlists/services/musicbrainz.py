@@ -43,6 +43,11 @@ def date_to_timezone_aware(ymd_string):
     Takes a string of the format ymd_string and puts it into a midnight@utc
     format so that the db doesn't complain.
     """
+
+    # Also add the year, if it's not there.
+    if 4 == len(ymd_string):
+        ymd_string = '{}-01-01'.format(ymd_string)
+
     return datetime.strptime(
         '{} 00:00:00+00:00'.format(ymd_string),
         '%Y-%m-%d %H:%M:%S%z'
@@ -73,6 +78,11 @@ def generic_search(q, limit=3):
         'Release': [release_group_filter(r) for r in release_groups],
         'Tracks': [work_filter(w) for w in works]
     }
+
+
+def search_release_groups(q, **kwargs):
+    """Look up a release-groups by MBID"""
+    return musicbrainzngs.search_release_groups(q, **kwargs)
 
 
 def search_release(mbid, **kwargs):

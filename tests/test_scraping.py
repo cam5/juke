@@ -4,9 +4,10 @@ from unittest.mock import patch
 from playlists.services import musicbrainz  # Appears redundant but avoids circular dep
 from playlists.services.stream_source import scrape_spotify
 from playlists.models import Artist, Release, Track
-from playlists.tasks import scrape_release_group
+from playlists.tasks import scrape_release_group, scrape_artist
 from playlists.tests import musicbrainz_mock
-from playlists.tests.responses import (ACHY_BREAKY_DATA, MB_RELEASE_GROUPS)
+from playlists.tests.responses import (ACHY_BREAKY_DATA, MB_RELEASE_GROUPS,
+                                       MB_ARTISTS_POST_MALONE)
 
 
 class SpotifyIntegration(TestCase):
@@ -104,3 +105,36 @@ class ScrapeReleaseAndTracksTask(TestCase):
 
             db_tracks = Track.objects.filter(release=db_release)
             self.assertIsNotNone(db_tracks)
+
+    @tag('task')
+    # @patch('musicbrainzngs.musicbrainz._mb_request',
+    #        musicbrainz_mock._mb_request)
+    def test_artist_scrape(self):
+        """
+        MB_ARTISTS_POST_MALONE is a response from the query to musicbrainz API
+        for artists matching the query "Post Malone"
+
+        It yeilds the following:
+        - id: b1e26560-60e5-4236-bbdb-9aa5a8d5ee19
+          type: Person
+          name: Post Malone
+          sort-name: Post Malone
+          gender: male
+          country: US
+          area:
+            ...
+            name: United States
+          life-span:
+            begin: '1995-07-04'
+            ended: 'false'
+        """
+        post = MB_ARTISTS_POST_MALONE[0]
+
+        scrape_artist(post.get('id'), releases=True)
+
+        db_artist = Artist.objects.get(mbid=post.get('id'))
+        self.assertEqual(db_artist.mbid, post.get('id'))
+        self.assertEqual(db_artist.name, post.get('name'))
+
+        db_releases = Release.objects.filter(artist=db_artist)
+        self.assertIsNotNone(db_releases)

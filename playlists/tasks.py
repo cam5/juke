@@ -54,10 +54,12 @@ def scrape_release_group(data):
                          for r in rg_list
                          if r.get('status') == "Official"]
         first_artist = release_group.get('artist-credit')[0]
-        scrape_release(
-            first_artist.get('artist')['id'],
-            release_mbids[0]
-        )
+
+        if len(release_mbids) > 0:
+            scrape_release(
+                first_artist.get('artist')['id'],
+                release_mbids[0]
+            )
 
 
 def scrape_release(artist_mbid, release_mbid):
@@ -88,7 +90,7 @@ def scrape_release(artist_mbid, release_mbid):
         release.title = r.get('title')
         release.barcode = r.get('barcode')
 
-        release.country = r.get('country')
+        release.country = r.get('country', '')
 
         try:
             labels = r.get('label-info-list')
@@ -111,7 +113,7 @@ def scrape_release(artist_mbid, release_mbid):
     # status = models.CharField(RELEASE_TYPE_CHOICES, max_length=14)
 
 
-def scrape_artist(artist_mbid):
+def scrape_artist(artist_mbid, releases=False):
     """
     Given the mbid of an artist, search up their profile and create a row for
     them in the db.
@@ -139,6 +141,11 @@ def scrape_artist(artist_mbid):
 
     artist.save()
 
+    if (releases):
+        # Omit actual query and just look for releases from an artist
+        releases = musicbrainz.search_release_groups('', arid=artist_mbid)
+        scrape_release_group(releases.get('release-group-list'))
+
     return artist
 
 
@@ -165,7 +172,7 @@ def scrape_track(track, release):
         new_track = Track()
         new_track.mbid = track.get('id')
         new_track.number = track.get('number')
-        new_track.length = timedelta(milliseconds=int(track.get('length')))
+        new_track.length = timedelta(milliseconds=int(track.get('length', 0)))
         new_track.name = track.get('recording', {}).get('title', '')
         new_track.release = release
 

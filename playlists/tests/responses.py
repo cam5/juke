@@ -87,6 +87,48 @@ MB_ARTISTS = json.loads("""{
     "artist-list": []
 }""")
 
+# A query for artists named "Post Malone"
+MB_ARTISTS_POST_MALONE = json.loads("""[
+  {
+    "id": "b1e26560-60e5-4236-bbdb-9aa5a8d5ee19",
+    "type": "Person",
+    "ext:score": "100",
+    "name": "Post Malone",
+    "sort-name": "Post Malone",
+    "gender": "male",
+    "country": "US",
+    "area": {
+      "id": "489ce91b-6658-3307-9877-795b68554c98",
+      "type": "Country",
+      "name": "United States",
+      "sort-name": "United States",
+      "life-span": {
+        "ended": "false"
+      }
+    },
+    "begin-area": {
+      "id": "1fee56fe-5b76-4a50-bc63-37ee51d3300f",
+      "type": "City",
+      "name": "Syracuse",
+      "sort-name": "Syracuse",
+      "life-span": {
+        "ended": "false"
+      }
+    },
+    "life-span": {
+      "begin": "1995-07-04",
+      "ended": "false"
+    },
+    "alias-list": [
+      {
+        "sort-name": "Post, Austin Richard",
+        "type": "Legal name",
+        "alias": "Austin Richard Post"
+      }
+    ]
+  }
+]""")
+
 MB_RELEASE_GROUPS = json.loads("""{
 "release-group-count": 7,
 "release-group-list": [
