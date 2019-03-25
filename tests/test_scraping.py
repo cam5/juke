@@ -107,8 +107,8 @@ class ScrapeReleaseAndTracksTask(TestCase):
             self.assertIsNotNone(db_tracks)
 
     @tag('task')
-    # @patch('musicbrainzngs.musicbrainz._mb_request',
-    #        musicbrainz_mock._mb_request)
+    @patch('musicbrainzngs.musicbrainz._mb_request',
+           musicbrainz_mock._mb_request)
     def test_artist_scrape(self):
         """
         MB_ARTISTS_POST_MALONE is a response from the query to musicbrainz API

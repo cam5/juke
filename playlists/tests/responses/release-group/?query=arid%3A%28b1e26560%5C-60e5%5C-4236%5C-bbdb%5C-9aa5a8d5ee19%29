@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<metadata created="2019-03-25T11:37:40.646Z"
+	xmlns="http://musicbrainz.org/ns/mmd-2.0#"
+	xmlns:ns2="http://musicbrainz.org/ns/ext#-2.0">
+	<release-group-list count="22" offset="0">
+		<release-group id="e6958ae0-f279-4bfc-874f-412eff360463" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9" ns2:score="100">
+			<title>Candy Paint</title>
+			<primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+			<artist-credit>
+				<name-credit>
+					<artist id="b1e26560-60e5-4236-bbdb-9aa5a8d5ee19">
+						<name>Post Malone</name>
+						<sort-name>Post Malone</sort-name>
+						<alias-list>
+							<alias sort-name="Post, Austin Richard" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Austin Richard Post</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+			</artist-credit>
+			<release-list count="1">
+				<release id="13195bae-f748-4d95-a4b5-c5497df3aa22">
+					<title>Candy Paint</title>
+					<status>Official</status>
+				</release>
+			</release-list>
+		</release-group>
+		<release-group id="c59e43b1-2594-45ff-a937-ee4ac653da59" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9" ns2:score="100">
+			<title>Go Flex</title>
+			<primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+			<artist-credit>
+				<name-credit>
+					<artist id="b1e26560-60e5-4236-bbdb-9aa5a8d5ee19">
+						<name>Post Malone</name>
+						<sort-name>Post Malone</sort-name>
+						<alias-list>
+							<alias sort-name="Post, Austin Richard" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Austin Richard Post</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+			</artist-credit>
+			<release-list count="2">
+				<release id="cf818a31-84d7-4a74-a3a3-2c9630cebbcc">
+					<title>Go Flex</title>
+					<status>Official</status>
+				</release>
+				<release id="4796fddc-4b86-4277-b5a9-4e80adab61e3">
+					<title>Go Flex</title>
+					<status>Official</status>
+				</release>
+			</release-list>
+		</release-group>
+		<release-group id="c43788e6-62c6-480f-b332-71da07b2f54c" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9" ns2:score="100">
+			<title>rockstar (remix)</title>
+			<primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+			<secondary-type-list>
+				<secondary-type id="0c60f497-ff81-3818-befd-abfc84a4858b">Remix</secondary-type>
+			</secondary-type-list>
+			<artist-credit>
+				<name-credit>
+					<artist id="b1e26560-60e5-4236-bbdb-9aa5a8d5ee19">
+						<name>Post Malone</name>
+						<sort-name>Post Malone</sort-name>
+						<alias-list>
+							<alias sort-name="Post, Austin Richard" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Austin Richard Post</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+			</artist-credit>
+			<release-list count="1">
+				<release id="f8663286-6ac6-4a87-8138-e80208038f4e">
+					<title>rockstar (remix)</title>
+					<status>Official</status>
+				</release>
+			</release-list>
+		</release-group>
+		<release-group id="9af98551-17ee-4882-90da-981bb9bede7c" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9" ns2:score="100">
+			<title>rockstar</title>
+			<primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+			<artist-credit>
+				<name-credit>
+					<artist id="b1e26560-60e5-4236-bbdb-9aa5a8d5ee19">
+						<name>Post Malone</name>
+						<sort-name>Post Malone</sort-name>
+						<alias-list>
+							<alias sort-name="Post, Austin Richard" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Austin Richard Post</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+			</artist-credit>
+			<release-list count="2">
+				<release id="067a0f7a-f63b-41ec-947d-7f07721119cb">
+					<title>rockstar</title>
+					<status>Official</status>
+				</release>
+				<release id="67c1f3b9-ebcb-4134-9555-c614861aedc4">
+					<title>rockstar</title>
+					<status>Official</status>
+				</release>
+			</release-list>
+			<tag-list>
+				<tag count="1">
+					<name>pop</name>
+				</tag>
+			</tag-list>
+		</release-group>
+		<release-group id="34ecdb38-b35f-43ad-8f9c-0ef9019b748f" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9" ns2:score="100">
+			<title>Sunflower (Not Your Dope Remix)</title>
+			<primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+			<secondary-type-list>
+				<secondary-type id="0c60f497-ff81-3818-befd-abfc84a4858b">Remix</secondary-type>
+			</secondary-type-list>
+			<artist-credit>
+				<name-credit joinphrase=", ">
+					<artist id="b1e26560-60e5-4236-bbdb-9aa5a8d5ee19">
+						<name>Post Malone</name>
+						<sort-name>Post Malone</sort-name>
+						<alias-list>
+							<alias sort-name="Post, Austin Richard" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Austin Richard Post</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+				<name-credit>
+					<artist id="a17ce9c3-8f6f-4dcc-a1b7-2a04ab9e31f0">
+						<name>Swae Lee</name>
+						<sort-name>Lee, Swae</sort-name>
+						<alias-list>
+							<alias sort-name="Brown, Khalif" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Khalif Brown</alias>
+							<alias sort-name="Brown, Khalif Malik Ibn Shaman" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Khalif Malik Ibn Shaman Brown</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+			</artist-credit>
+			<release-list count="1">
+				<release id="f3522dcd-ca8e-457b-8671-c8aed3de381b">
+					<title>Sunflower (Not Your Dope Remix)</title>
+					<status>Bootleg</status>
+				</release>
+			</release-list>
+		</release-group>
+		<release-group id="aefcd924-16fe-4913-a896-5557cffde6a7" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9" ns2:score="100">
+			<title>Came Up</title>
+			<primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+			<artist-credit>
+				<name-credit joinphrase=", ">
+					<artist id="8ca3f991-47c7-4506-8fa2-327e376c71b4">
+						<name>Flosstradamus</name>
+						<sort-name>Flosstradamus</sort-name>
+						<disambiguation>Hip-hop/trap/EDM duo J2K &amp; Autobot</disambiguation>
+						<alias-list>
+							<alias sort-name="⚠" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">⚠</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+				<name-credit joinphrase=" &amp; ">
+					<artist id="53442fb2-0e7e-47a2-b4c4-47bfb38d55aa">
+						<name>FKi 1st</name>
+						<sort-name>FKi 1st</sort-name>
+						<disambiguation>Worked with Hip-Hop artist I LOVE MAKONNEN</disambiguation>
+						<alias-list>
+							<alias sort-name="Roberts, Trocon" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Trocon Roberts</alias>
+							<alias sort-name="FKi 1st" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">FKi 1st</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+				<name-credit joinphrase=" feat. ">
+					<artist id="cb000d61-929f-4e17-9fe3-a154a734acc2">
+						<name>graves</name>
+						<sort-name>graves</sort-name>
+						<disambiguation>Hawaiian producer Christian Mochizuki</disambiguation>
+					</artist>
+				</name-credit>
+				<name-credit joinphrase=" &amp; ">
+					<artist id="b1e26560-60e5-4236-bbdb-9aa5a8d5ee19">
+						<name>Post Malone</name>
+						<sort-name>Post Malone</sort-name>
+						<alias-list>
+							<alias sort-name="Post, Austin Richard" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Austin Richard Post</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+				<name-credit>
+					<artist id="ed039a68-b775-4a8b-942a-3c73eac97ab3">
+						<name>Key!</name>
+						<sort-name>Key</sort-name>
+						<disambiguation>rapper and founder of Atlanta rap collective Two-9</disambiguation>
+					</artist>
+				</name-credit>
+			</artist-credit>
+			<release-list count="1">
+				<release id="c6454252-f41c-4a50-b053-00d081e7c4de">
+					<title>Came Up</title>
+					<status>Official</status>
+				</release>
+			</release-list>
+		</release-group>
+		<release-group id="26d4b970-a948-4b15-babe-871c4bca17bf" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9" ns2:score="100">
+			<title>Over Now (LuxLyfe Remix)</title>
+			<primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+			<secondary-type-list>
+				<secondary-type id="0c60f497-ff81-3818-befd-abfc84a4858b">Remix</secondary-type>
+			</secondary-type-list>
+			<artist-credit>
+				<name-credit>
+					<artist id="b1e26560-60e5-4236-bbdb-9aa5a8d5ee19">
+						<name>Post Malone</name>
+						<sort-name>Post Malone</sort-name>
+						<alias-list>
+							<alias sort-name="Post, Austin Richard" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Austin Richard Post</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+			</artist-credit>
+			<release-list count="1">
+				<release id="2595652e-6ee4-4ef5-b05c-0afb80de9e7a">
+					<title>Over Now (LuxLyfe Remix)</title>
+					<status>Bootleg</status>
+				</release>
+			</release-list>
+		</release-group>
+		<release-group id="bfff2b45-7ee9-41ef-aedc-1f1f97136854" type="EP" type-id="6d0c5bf6-7a33-3420-a519-44fc63eedebf" ns2:score="100">
+			<title>Post Malone</title>
+			<primary-type id="6d0c5bf6-7a33-3420-a519-44fc63eedebf">EP</primary-type>
+			<artist-credit>
+				<name-credit>
+					<artist id="b1e26560-60e5-4236-bbdb-9aa5a8d5ee19">
+						<name>Post Malone</name>
+						<sort-name>Post Malone</sort-name>
+						<alias-list>
+							<alias sort-name="Post, Austin Richard" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Austin Richard Post</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+			</artist-credit>
+			<release-list count="1">
+				<release id="761782aa-2b42-49fc-b89a-2f9f3c185084">
+					<title>Post Malone</title>
+					<status>Official</status>
+				</release>
+			</release-list>
+		</release-group>
+		<release-group id="e553730c-868b-48ab-99af-52d51ab427f8" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9" ns2:score="100">
+			<title>Psycho</title>
+			<primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+			<artist-credit>
+				<name-credit joinphrase=" feat. ">
+					<artist id="b1e26560-60e5-4236-bbdb-9aa5a8d5ee19">
+						<name>Post Malone</name>
+						<sort-name>Post Malone</sort-name>
+						<alias-list>
+							<alias sort-name="Post, Austin Richard" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Austin Richard Post</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+				<name-credit>
+					<artist id="7bd66c18-cb33-49aa-9279-140acedbdb49">
+						<name>Ty Dolla $ign</name>
+						<sort-name>Ty Dolla Sign</sort-name>
+						<alias-list>
+							<alias sort-name="Ty Dolla Sign">Ty Dolla Sign</alias>
+							<alias sort-name="Griffin, Tyrone">Tyrone Griffin</alias>
+							<alias sort-name="Griffin Jr., Tyrone William" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Tyrone William Griffin Jr.</alias>
+							<alias sort-name="TyDolla $ign" type="Artist name" type-id="894afba6-2816-3c24-8072-eadb66bd04bc">TyDolla $ign</alias>
+							<alias sort-name="Ty$" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">Ty$</alias>
+							<alias sort-name="Ty Dolla $ign">Ty Dolla $ign</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+			</artist-credit>
+			<release-list count="2">
+				<release id="696d68e0-47db-4d90-a13c-ffe268eb4d5b">
+					<title>Psycho</title>
+					<status>Official</status>
+				</release>
+				<release id="dc4ae71f-9cd8-4f2b-ac41-7d6dfa62d8cf">
+					<title>Psycho</title>
+					<status>Official</status>
+				</release>
+			</release-list>
+		</release-group>
+		<release-group id="84414930-8b82-4d19-8cd8-fcdc90297516" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9" ns2:score="100">
+			<title>Deja Vu</title>
+			<primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+			<artist-credit>
+				<name-credit joinphrase=" feat. ">
+					<artist id="b1e26560-60e5-4236-bbdb-9aa5a8d5ee19">
+						<name>Post Malone</name>
+						<sort-name>Post Malone</sort-name>
+						<alias-list>
+							<alias sort-name="Post, Austin Richard" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Austin Richard Post</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+				<name-credit>
+					<artist id="e0140a67-e4d1-4f13-8a01-364355bee46e">
+						<name>Justin Bieber</name>
+						<sort-name>Bieber, Justin</sort-name>
+						<alias-list>
+							<alias sort-name="Bieber, Justin Drew" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Justin Drew Bieber</alias>
+							<alias sort-name="Justin Beiber" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">Justin Beiber</alias>
+							<alias locale="ja" sort-name="ジャスティン・ビーバー" type="Artist name" type-id="894afba6-2816-3c24-8072-eadb66bd04bc" primary="primary">ジャスティン・ビーバー</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+			</artist-credit>
+			<release-list count="1">
+				<release id="8a938caa-051e-4b64-8f76-3963b4a75c8a">
+					<title>Deja Vu</title>
+					<status>Official</status>
+				</release>
+			</release-list>
+		</release-group>
+		<release-group id="20772646-5e42-4074-a9f0-6491984f837b" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9" ns2:score="100">
+			<title>Sunflower (Spider‐Man: Into The Spider‐Verse)</title>
+			<primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+			<secondary-type-list>
+				<secondary-type id="22a628ad-c082-3c4f-b1b6-d41665107b88">Soundtrack</secondary-type>
+			</secondary-type-list>
+			<artist-credit>
+				<name-credit joinphrase=" &amp; ">
+					<artist id="b1e26560-60e5-4236-bbdb-9aa5a8d5ee19">
+						<name>Post Malone</name>
+						<sort-name>Post Malone</sort-name>
+						<alias-list>
+							<alias sort-name="Post, Austin Richard" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Austin Richard Post</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+				<name-credit>
+					<artist id="a17ce9c3-8f6f-4dcc-a1b7-2a04ab9e31f0">
+						<name>Swae Lee</name>
+						<sort-name>Lee, Swae</sort-name>
+						<alias-list>
+							<alias sort-name="Brown, Khalif" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Khalif Brown</alias>
+							<alias sort-name="Brown, Khalif Malik Ibn Shaman" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Khalif Malik Ibn Shaman Brown</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+			</artist-credit>
+			<release-list count="1">
+				<release id="60066d49-3ca6-40da-9235-97508e3f7fc7">
+					<title>Sunflower (Spider‐Man: Into The Spider‐Verse)</title>
+					<status>Official</status>
+				</release>
+			</release-list>
+			<tag-list>
+				<tag count="1">
+					<name>pop</name>
+				</tag>
+			</tag-list>
+		</release-group>
+		<release-group id="82076d12-719b-46a6-b89d-10e6b4bdee25" type="Album" type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc" ns2:score="100">
+			<title>August 26</title>
+			<primary-type id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type>
+			<secondary-type-list>
+				<secondary-type id="15c1b1f5-d893-3375-a1db-e180c5ae15ed">Mixtape/Street</secondary-type>
+			</secondary-type-list>
+			<artist-credit>
+				<name-credit>
+					<artist id="b1e26560-60e5-4236-bbdb-9aa5a8d5ee19">
+						<name>Post Malone</name>
+						<sort-name>Post Malone</sort-name>
+						<alias-list>
+							<alias sort-name="Post, Austin Richard" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Austin Richard Post</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+			</artist-credit>
+			<release-list count="1">
+				<release id="11074151-67c0-45f9-8895-5402fadcf355">
+					<title>August 26</title>
+					<status>Official</status>
+				</release>
+			</release-list>
+		</release-group>
+		<release-group id="7dac3c7a-9161-4fdc-a697-504c89d1d825" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9" ns2:score="100">
+			<title>Jackie Chan</title>
+			<primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+			<artist-credit>
+				<name-credit joinphrase=" &amp; ">
+					<artist id="aabb1d9f-be12-45b3-a84d-a1fc3e8181fd">
+						<name>Tiësto</name>
+						<sort-name>Tiësto</sort-name>
+						<disambiguation>Dutch DJ and record producer</disambiguation>
+						<alias-list>
+							<alias sort-name="DJ Testo" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">DJ Testo</alias>
+							<alias sort-name="DJ Tiesto" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">DJ Tiesto</alias>
+							<alias sort-name="Maxi Jazz &amp; Tiësto" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">Maxi Jazz &amp; Tiësto</alias>
+							<alias sort-name="DJ Tïesto" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">DJ Tïesto</alias>
+							<alias sort-name="DJ Tiesta">DJ Tiesta</alias>
+							<alias sort-name="DJ Tiësto" type="Artist name" type-id="894afba6-2816-3c24-8072-eadb66bd04bc">DJ Tiësto</alias>
+							<alias sort-name="Tiësto &amp; Maxi Jazz" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">Tiësto &amp; Maxi Jazz</alias>
+							<alias sort-name="Tiesto" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">Tiesto</alias>
+							<alias sort-name="Triësto" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">Triësto</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+				<name-credit joinphrase=" ft. ">
+					<artist id="7eb0fbce-7e15-4620-a11f-e4d9a310d1e3">
+						<name>Dzeko</name>
+						<sort-name>Dzeko</sort-name>
+						<disambiguation>Dance, Club, Electro</disambiguation>
+					</artist>
+				</name-credit>
+				<name-credit joinphrase=" &amp; ">
+					<artist id="39792e67-a336-4842-9ed6-39854c6c8ff0">
+						<name>Preme</name>
+						<sort-name>Preme</sort-name>
+						<disambiguation>formerly P. Reign</disambiguation>
+						<alias-list>
+							<alias sort-name="Preme" type="Artist name" type-id="894afba6-2816-3c24-8072-eadb66bd04bc">Preme</alias>
+							<alias sort-name="Humphrey, Raynford" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Raynford Humphrey</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+				<name-credit>
+					<artist id="b1e26560-60e5-4236-bbdb-9aa5a8d5ee19">
+						<name>Post Malone</name>
+						<sort-name>Post Malone</sort-name>
+						<alias-list>
+							<alias sort-name="Post, Austin Richard" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Austin Richard Post</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+			</artist-credit>
+			<release-list count="3">
+				<release id="94fb9397-40a6-4f5c-b3d4-9d8578682715">
+					<title>Jackie Chan</title>
+					<status>Official</status>
+				</release>
+				<release id="706c0e66-6ec5-4546-844c-c682de49a969">
+					<title>Jackie Chan</title>
+					<status>Official</status>
+				</release>
+				<release id="72873a26-7f06-4f19-a686-fb78b8fa96cc">
+					<title>Jackie Chan</title>
+					<status>Official</status>
+				</release>
+			</release-list>
+		</release-group>
+		<release-group id="3c986ac1-71cb-478d-8f0e-e2e587bfa412" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9" ns2:score="100">
+			<title>White Iverson</title>
+			<primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+			<artist-credit>
+				<name-credit>
+					<artist id="b1e26560-60e5-4236-bbdb-9aa5a8d5ee19">
+						<name>Post Malone</name>
+						<sort-name>Post Malone</sort-name>
+						<alias-list>
+							<alias sort-name="Post, Austin Richard" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Austin Richard Post</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+			</artist-credit>
+			<release-list count="1">
+				<release id="eaf578ff-cc21-4e43-8903-64344f70d75b">
+					<title>White Iverson</title>
+					<status>Official</status>
+				</release>
+			</release-list>
+			<tag-list>
+				<tag count="2">
+					<name>hip hop</name>
+				</tag>
+			</tag-list>
+		</release-group>
+		<release-group id="a6045fe5-c283-4778-995c-04d953fe73e1" type="Album" type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc" ns2:score="100">
+			<title>beerbongs &amp; bentleys</title>
+			<primary-type id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type>
+			<artist-credit>
+				<name-credit>
+					<artist id="b1e26560-60e5-4236-bbdb-9aa5a8d5ee19">
+						<name>Post Malone</name>
+						<sort-name>Post Malone</sort-name>
+						<alias-list>
+							<alias sort-name="Post, Austin Richard" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Austin Richard Post</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+			</artist-credit>
+			<release-list count="5">
+				<release id="bd13e521-687a-4cd3-ac10-d4076167f31d">
+					<title>beerbongs &amp; bentleys</title>
+					<status>Official</status>
+				</release>
+				<release id="a458e511-3319-41e2-a01e-35c71ca70e6a">
+					<title>beerbongs &amp; bentleys</title>
+					<status>Official</status>
+				</release>
+				<release id="7e3e6ec2-2194-4c74-a417-7b0b3ffb354a">
+					<title>beerbongs &amp; bentleys</title>
+					<status>Official</status>
+				</release>
+				<release id="bdf93dcf-5c64-4ad2-80e8-0779a03ec218">
+					<title>beerbongs &amp; bentleys</title>
+					<status>Official</status>
+				</release>
+				<release id="c4307589-4b17-4b2c-99ae-51ba29ee8714">
+					<title>beerbongs &amp; bentleys</title>
+					<status>Official</status>
+				</release>
+			</release-list>
+			<tag-list>
+				<tag count="2">
+					<name>rap</name>
+				</tag>
+				<tag count="1">
+					<name>jazz</name>
+				</tag>
+			</tag-list>
+		</release-group>
+		<release-group id="3843ba6a-0b1e-48c0-bc86-2f64e6d9525c" type="Album" type-id="f529b476-6e62-324f-b0aa-1f3e33d313fc" ns2:score="100">
+			<title>Stoney</title>
+			<primary-type id="f529b476-6e62-324f-b0aa-1f3e33d313fc">Album</primary-type>
+			<artist-credit>
+				<name-credit>
+					<artist id="b1e26560-60e5-4236-bbdb-9aa5a8d5ee19">
+						<name>Post Malone</name>
+						<sort-name>Post Malone</sort-name>
+						<alias-list>
+							<alias sort-name="Post, Austin Richard" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Austin Richard Post</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+			</artist-credit>
+			<release-list count="8">
+				<release id="0f74023d-b716-4dd8-9e51-30a4989134c1">
+					<title>Stoney</title>
+					<status>Official</status>
+				</release>
+				<release id="ed2bc51e-e257-44ac-a81f-df00647b1315">
+					<title>Stoney</title>
+					<status>Official</status>
+				</release>
+				<release id="0406d134-2a6b-4e1a-9031-e4beae4bb7a3">
+					<title>Stoney</title>
+					<status>Official</status>
+				</release>
+				<release id="52bb9c96-dda7-4e30-ae0a-6a90d0d5b830">
+					<title>Stoney</title>
+					<status>Official</status>
+				</release>
+				<release id="796961d8-5e9a-43f0-8595-13f8546c7398">
+					<title>Stoney</title>
+					<status>Official</status>
+				</release>
+				<release id="e48b1f72-9d03-4c85-affd-a134c88fa8d1">
+					<title>Stoney</title>
+					<status>Official</status>
+				</release>
+				<release id="b2755937-9da1-44b1-86f0-0f2e53bd9e74">
+					<title>Stoney</title>
+					<status>Official</status>
+				</release>
+				<release id="be737efb-043a-4049-8a12-0824c0799e90">
+					<title>Stoney</title>
+					<status>Official</status>
+				</release>
+			</release-list>
+			<tag-list>
+				<tag count="1">
+					<name>hip-hop</name>
+				</tag>
+				<tag count="2">
+					<name>hiphop/rap</name>
+				</tag>
+			</tag-list>
+		</release-group>
+		<release-group id="01c3ca56-2392-45ca-b120-f80a40fbf413" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9" ns2:score="100">
+			<title>Wow.</title>
+			<primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+			<artist-credit>
+				<name-credit>
+					<artist id="b1e26560-60e5-4236-bbdb-9aa5a8d5ee19">
+						<name>Post Malone</name>
+						<sort-name>Post Malone</sort-name>
+						<alias-list>
+							<alias sort-name="Post, Austin Richard" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Austin Richard Post</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+			</artist-credit>
+			<release-list count="4">
+				<release id="46f6674f-f802-474b-bb54-87056a64e768">
+					<title>Wow.</title>
+					<status>Official</status>
+				</release>
+				<release id="888f76e7-86fc-44a6-807e-ff88bad744b8">
+					<title>Wow.</title>
+					<status>Official</status>
+				</release>
+				<release id="e43bb74a-d3a1-4bad-a5ea-e845f95c0aec">
+					<title>Wow.</title>
+					<status>Official</status>
+				</release>
+				<release id="f98dceee-517c-472b-87dd-9618efcba486">
+					<title>Wow.</title>
+					<status>Official</status>
+				</release>
+			</release-list>
+		</release-group>
+		<release-group id="fc5dc177-720f-47e0-9f15-3bf48f204c6d" type="EP" type-id="6d0c5bf6-7a33-3420-a519-44fc63eedebf" ns2:score="100">
+			<title>Jackie Chan</title>
+			<disambiguation>remixes</disambiguation>
+			<primary-type id="6d0c5bf6-7a33-3420-a519-44fc63eedebf">EP</primary-type>
+			<secondary-type-list>
+				<secondary-type id="0c60f497-ff81-3818-befd-abfc84a4858b">Remix</secondary-type>
+			</secondary-type-list>
+			<artist-credit>
+				<name-credit joinphrase=" &amp; ">
+					<artist id="aabb1d9f-be12-45b3-a84d-a1fc3e8181fd">
+						<name>Tiësto</name>
+						<sort-name>Tiësto</sort-name>
+						<disambiguation>Dutch DJ and record producer</disambiguation>
+						<alias-list>
+							<alias sort-name="DJ Tiesta">DJ Tiesta</alias>
+							<alias sort-name="DJ Testo" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">DJ Testo</alias>
+							<alias sort-name="DJ Tiesto" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">DJ Tiesto</alias>
+							<alias sort-name="Maxi Jazz &amp; Tiësto" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">Maxi Jazz &amp; Tiësto</alias>
+							<alias sort-name="Tiësto &amp; Maxi Jazz" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">Tiësto &amp; Maxi Jazz</alias>
+							<alias sort-name="DJ Tiësto" type="Artist name" type-id="894afba6-2816-3c24-8072-eadb66bd04bc">DJ Tiësto</alias>
+							<alias sort-name="DJ Tïesto" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">DJ Tïesto</alias>
+							<alias sort-name="Triësto" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">Triësto</alias>
+							<alias sort-name="Tiesto" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">Tiesto</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+				<name-credit joinphrase=" ft. ">
+					<artist id="7eb0fbce-7e15-4620-a11f-e4d9a310d1e3">
+						<name>Dzeko</name>
+						<sort-name>Dzeko</sort-name>
+						<disambiguation>Dance, Club, Electro</disambiguation>
+					</artist>
+				</name-credit>
+				<name-credit joinphrase=" &amp; ">
+					<artist id="39792e67-a336-4842-9ed6-39854c6c8ff0">
+						<name>Preme</name>
+						<sort-name>Preme</sort-name>
+						<disambiguation>formerly P. Reign</disambiguation>
+						<alias-list>
+							<alias sort-name="Humphrey, Raynford" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Raynford Humphrey</alias>
+							<alias sort-name="Preme" type="Artist name" type-id="894afba6-2816-3c24-8072-eadb66bd04bc">Preme</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+				<name-credit>
+					<artist id="b1e26560-60e5-4236-bbdb-9aa5a8d5ee19">
+						<name>Post Malone</name>
+						<sort-name>Post Malone</sort-name>
+						<alias-list>
+							<alias sort-name="Post, Austin Richard" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Austin Richard Post</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+			</artist-credit>
+			<release-list count="2">
+				<release id="88c1477e-17fd-4ac5-a0a5-da53d132447d">
+					<title>Jackie Chan (Remixes, Vol 1)</title>
+					<status>Official</status>
+				</release>
+				<release id="b5a952c4-888d-4ebb-aa15-ea3b6f7ee62e">
+					<title>Jackie Chan (Remixes, Vol. 2)</title>
+					<status>Official</status>
+				</release>
+			</release-list>
+		</release-group>
+		<release-group id="6f34313d-a0e1-49a2-9d55-e44c02fc7479" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9" ns2:score="100">
+			<title>Jackie Chan</title>
+			<disambiguation>Laidback Luke Remix</disambiguation>
+			<primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+			<secondary-type-list>
+				<secondary-type id="0c60f497-ff81-3818-befd-abfc84a4858b">Remix</secondary-type>
+			</secondary-type-list>
+			<artist-credit>
+				<name-credit joinphrase=" &amp; ">
+					<artist id="aabb1d9f-be12-45b3-a84d-a1fc3e8181fd">
+						<name>Tiësto</name>
+						<sort-name>Tiësto</sort-name>
+						<disambiguation>Dutch DJ and record producer</disambiguation>
+						<alias-list>
+							<alias sort-name="DJ Tiesta">DJ Tiesta</alias>
+							<alias sort-name="DJ Testo" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">DJ Testo</alias>
+							<alias sort-name="DJ Tiesto" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">DJ Tiesto</alias>
+							<alias sort-name="Maxi Jazz &amp; Tiësto" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">Maxi Jazz &amp; Tiësto</alias>
+							<alias sort-name="Tiësto &amp; Maxi Jazz" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">Tiësto &amp; Maxi Jazz</alias>
+							<alias sort-name="DJ Tiësto" type="Artist name" type-id="894afba6-2816-3c24-8072-eadb66bd04bc">DJ Tiësto</alias>
+							<alias sort-name="DJ Tïesto" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">DJ Tïesto</alias>
+							<alias sort-name="Triësto" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">Triësto</alias>
+							<alias sort-name="Tiesto" type="Search hint" type-id="1937e404-b981-3cb7-8151-4c86ebfc8d8e">Tiesto</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+				<name-credit joinphrase=" ft. ">
+					<artist id="7eb0fbce-7e15-4620-a11f-e4d9a310d1e3">
+						<name>Dzeko</name>
+						<sort-name>Dzeko</sort-name>
+						<disambiguation>Dance, Club, Electro</disambiguation>
+					</artist>
+				</name-credit>
+				<name-credit joinphrase=" &amp; ">
+					<artist id="39792e67-a336-4842-9ed6-39854c6c8ff0">
+						<name>Preme</name>
+						<sort-name>Preme</sort-name>
+						<disambiguation>formerly P. Reign</disambiguation>
+						<alias-list>
+							<alias sort-name="Humphrey, Raynford" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Raynford Humphrey</alias>
+							<alias sort-name="Preme" type="Artist name" type-id="894afba6-2816-3c24-8072-eadb66bd04bc">Preme</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+				<name-credit>
+					<artist id="b1e26560-60e5-4236-bbdb-9aa5a8d5ee19">
+						<name>Post Malone</name>
+						<sort-name>Post Malone</sort-name>
+						<alias-list>
+							<alias sort-name="Post, Austin Richard" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Austin Richard Post</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+			</artist-credit>
+			<release-list count="1">
+				<release id="a926616f-6d5c-4a92-b9f6-c61e0da0423c">
+					<title>Jackie Chan</title>
+					<status>Official</status>
+				</release>
+			</release-list>
+		</release-group>
+		<release-group id="95d0d38d-4f02-4597-8786-7251ab43bf7a" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9" ns2:score="100">
+			<title>Burning Man</title>
+			<primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+			<artist-credit>
+				<name-credit joinphrase=" feat. ">
+					<artist id="00136dd9-1047-4999-af1f-d709c5fa09f9">
+						<name>watt</name>
+						<sort-name>watt</sort-name>
+						<disambiguation>producer</disambiguation>
+						<alias-list>
+							<alias sort-name="Watt, Andrew" type="Artist name" type-id="894afba6-2816-3c24-8072-eadb66bd04bc">Andrew Watt</alias>
+							<alias sort-name="Wotman, Andrew" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Andrew Wotman</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+				<name-credit>
+					<artist id="b1e26560-60e5-4236-bbdb-9aa5a8d5ee19">
+						<name>Post Malone</name>
+						<sort-name>Post Malone</sort-name>
+						<alias-list>
+							<alias sort-name="Post, Austin Richard" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Austin Richard Post</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+			</artist-credit>
+			<release-list count="1">
+				<release id="57de01d4-8885-4d28-996e-b72a23638175">
+					<title>Burning Man</title>
+					<status>Official</status>
+				</release>
+			</release-list>
+		</release-group>
+		<release-group id="ed0d6e63-de14-4748-8b81-6c4c319117ca" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9" ns2:score="100">
+			<title>Rockstar (Crankdat Remix)</title>
+			<primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+			<artist-credit>
+				<name-credit joinphrase=" ft. ">
+					<artist id="b1e26560-60e5-4236-bbdb-9aa5a8d5ee19">
+						<name>Post Malone</name>
+						<sort-name>Post Malone</sort-name>
+						<alias-list>
+							<alias sort-name="Post, Austin Richard" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Austin Richard Post</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+				<name-credit>
+					<artist id="37b2cb82-ef79-4d46-a184-a549450aa231">
+						<name>21 Savage</name>
+						<sort-name>21 Savage</sort-name>
+						<disambiguation>UK rapper</disambiguation>
+						<alias-list>
+							<alias sort-name="Abraham-Joseph, Shayaa">Shayaa Abraham-Joseph</alias>
+							<alias sort-name="Abraham-Joseph, Shayaa Bin" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Shayaa Bin Abraham-Joseph</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+			</artist-credit>
+			<release-list count="1">
+				<release id="e962b6b5-8ac6-42f4-b71b-87097a309412">
+					<title>Rockstar (Crankdat Remix)</title>
+					<status>Bootleg</status>
+				</release>
+			</release-list>
+		</release-group>
+		<release-group id="a9a73ce5-49e1-4887-beaa-f20f50b74294" type="Single" type-id="d6038452-8ee0-3f68-affc-2de9a1ede0b9" ns2:score="100">
+			<title>Homemade Dynamite (remix)</title>
+			<primary-type id="d6038452-8ee0-3f68-affc-2de9a1ede0b9">Single</primary-type>
+			<secondary-type-list>
+				<secondary-type id="0c60f497-ff81-3818-befd-abfc84a4858b">Remix</secondary-type>
+			</secondary-type-list>
+			<artist-credit>
+				<name-credit joinphrase=" feat. ">
+					<artist id="8e494408-8620-4c6a-82c2-c2ca4a1e4f12">
+						<name>Lorde</name>
+						<sort-name>Lorde</sort-name>
+						<disambiguation>New Zealand singer-songwriter</disambiguation>
+						<alias-list>
+							<alias sort-name="Yelich O'Connor, Ella">Ella Yelich O’Connor</alias>
+							<alias sort-name="Yelich-O'Connor, Ella Maria Lani" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Ella Maria Lani Yelich-O'Connor</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+				<name-credit joinphrase=", ">
+					<artist id="28737730-ec70-4da5-89c5-77ac13c5c34d">
+						<name>Khalid</name>
+						<sort-name>Khalid</sort-name>
+						<disambiguation>US R&amp;B singer-songwriter from El Paso, Texas. "American Teen"</disambiguation>
+						<alias-list>
+							<alias sort-name="Robinson, Khalid Donnel" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Khalid Donnel Robinson</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+				<name-credit joinphrase=" &amp; ">
+					<artist id="b1e26560-60e5-4236-bbdb-9aa5a8d5ee19">
+						<name>Post Malone</name>
+						<sort-name>Post Malone</sort-name>
+						<alias-list>
+							<alias sort-name="Post, Austin Richard" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Austin Richard Post</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+				<name-credit>
+					<artist id="272989c8-5535-492d-a25c-9f58803e027f">
+						<name>SZA</name>
+						<sort-name>SZA</sort-name>
+						<alias-list>
+							<alias sort-name="Rowe, Solána" type="Legal name" type-id="d4dcd0c0-b341-3612-a332-c0ce797b25cf">Solána Rowe</alias>
+						</alias-list>
+					</artist>
+				</name-credit>
+			</artist-credit>
+			<release-list count="2">
+				<release id="1969bd52-285f-4b86-9538-8b2cdd05f8d6">
+					<title>Homemade Dynamite (remix)</title>
+					<status>Official</status>
+				</release>
+				<release id="d24a4e8a-8848-40bb-a8fb-072e067f198d">
+					<title>Homemade Dynamite (remix)</title>
+					<status>Official</status>
+				</release>
+			</release-list>
+		</release-group>
+	</release-group-list>
+</metadata>
