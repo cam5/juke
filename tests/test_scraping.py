@@ -4,10 +4,10 @@ from unittest.mock import patch
 from playlists.services import musicbrainz  # Appears redundant but avoids circular dep
 from playlists.services.stream_source import scrape_spotify
 from playlists.models import Artist, Release, Track
-from playlists.tasks import scrape_release_group, scrape_artist
+from playlists.tasks import scrape_release_group, scrape_artist, scrape_track
 from playlists.tests import musicbrainz_mock
 from playlists.tests.responses import (ACHY_BREAKY_DATA, MB_RELEASE_GROUPS,
-                                       MB_ARTISTS_POST_MALONE)
+                                       MB_ARTISTS_POST_MALONE, GOAT_DATA)
 
 
 class SpotifyIntegration(TestCase):
@@ -114,7 +114,7 @@ class ScrapeReleaseAndTracksTask(TestCase):
         MB_ARTISTS_POST_MALONE is a response from the query to musicbrainz API
         for artists matching the query "Post Malone"
 
-        It yeilds the following:
+        It yields the following:
         - id: b1e26560-60e5-4236-bbdb-9aa5a8d5ee19
           type: Person
           name: Post Malone
@@ -138,3 +138,39 @@ class ScrapeReleaseAndTracksTask(TestCase):
 
         db_releases = Release.objects.filter(artist=db_artist)
         self.assertIsNotNone(db_releases)
+
+        # @TODO - include tests for all the matching tracks; At present, I
+        # believe some errors are preventing all from getting in.
+
+    @tag('task')
+    @patch('musicbrainzngs.musicbrainz._mb_request',
+           musicbrainz_mock._mb_request)
+    def test_track_scrape(self):
+        """
+        Track search data (work) looks like this, coming out of MusicBrainz:
+        - artist-relation-list:
+            - artist:
+                disambiguation: New Zealand dream pop
+                id: 74279ef5-64fc-435d-a3c7-19cad255078d
+                name: French for Rabbits
+              direction: backward
+              type: writer
+              type-id: a255bca1-b157-4518-9108-7b147dc3fc68
+          ext:score: '100'
+          id: 4bb3a766-7b8e-4c56-b25e-8086784d01d7
+          recording-relation-list:
+            - recording:
+                id: 421734d4-5392-4f17-bf95-dd12e0dbd97f
+                title: Goat
+              type: performance
+              type-id: a3005666-a872-32c3-ad06-98af558e99b0
+            title: Goat
+        """
+        goat_track_data = GOAT_DATA[0]
+
+        scrape_track(goat_track_data)
+
+        known_track_id = '1ac92eb5-9a77-496a-94a8-aad6e88176b2'
+        db_tracks = Track.objects.filter(name=goat_track_data.get('title'))
+
+        self.assertIn(known_track_id, [t.mbid for t in db_tracks])

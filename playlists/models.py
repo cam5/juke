@@ -8,6 +8,9 @@ GENDERS = ['Female', 'Male', 'None']
 GENDER_CHOICES = sorted((g, g) for g in GENDERS)
 ARTIST_TYPE_CHOICES = sorted((t, t) for t in ARTIST_TYPES)
 
+# MusicBraniz schema image:
+# https://wiki.musicbrainz.org/-/images/5/52/ngs.png
+
 
 class Artist(models.Model):
     """An artist is generally a musician (or musician persona), group of
@@ -71,8 +74,14 @@ class Release(models.Model):
 
 
 class Track(models.Model):
-    """ A track belongs to a release. It represents a "song", ya dummy!
-    Orderable by dint of the "number" field."""
+    """
+    A track belongs to a release. It represents a "song", ya dummy!
+
+    When searching the mb database we query for 'works' because that's
+    expedient, for now.
+
+    Orderable by dint of the "number" field.
+    """
     release = models.ForeignKey('Release', on_delete=models.CASCADE,
                                 related_name='tracks')
     number = models.PositiveSmallIntegerField()

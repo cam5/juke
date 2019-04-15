@@ -149,8 +149,10 @@ def scrape_artist(artist_mbid, releases=False):
     return artist
 
 
-def scrape_track(track, release):
+def scrape_release_track(track, release):
     """
+    Scrape a track which you know about through the release you already have.
+
     Example data for `track`:
         {
             "id": "f2a3c13d-a8d1-3233-9aa6-c8bd23d0f355",
@@ -171,7 +173,7 @@ def scrape_track(track, release):
     except ObjectDoesNotExist:
         new_track = Track()
         new_track.mbid = track.get('id')
-        new_track.number = track.get('number')
+        new_track.number = track.get('position')
         new_track.length = timedelta(milliseconds=int(track.get('length', 0)))
         new_track.name = track.get('recording', {}).get('title', '')
         new_track.release = release
@@ -179,7 +181,60 @@ def scrape_track(track, release):
         new_track.save()
 
 
+def scrape_track(track):
+    """
+    Scrape a track you found as the result of a track-search.
+
+    The "track" is really a "work" object.
+
+    Example data
+    {
+        "artist-relation-list": [
+            {
+                "artist": {
+                    "disambiguation": "New Zealand dream pop",
+                    "id": "74279ef5-64fc-435d-a3c7-19cad255078d",
+                    "name": "French for Rabbits",
+                    "sort-name": "French for Rabbits"
+                },
+                "direction": "backward",
+                "type": "writer",
+                "type-id": "a255bca1-b157-4518-9108-7b147dc3fc68"
+            }
+        ],
+        "ext:score": "100",
+        "id": "4bb3a766-7b8e-4c56-b25e-8086784d01d7",
+        "recording-relation-list": [
+            {
+                "direction": "backward",
+                "recording": {
+                    "id": "421734d4-5392-4f17-bf95-dd12e0dbd97f",
+                    "title": "Goat"
+                },
+                "type": "performance",
+                "type-id": "a3005666-a872-32c3-ad06-98af558e99b0"
+            }
+        ],
+        "title": "Goat"
+    }
+    """
+    try:
+        track = Track.objects.get(mbid=track.get('id'))
+    except ObjectDoesNotExist:
+        # It would be simpler just to scoop the whole thing, right?
+        for r in track.get('recording-relation-list', {}):
+            rid = r.get('recording', {}).get('id', '')
+            search = musicbrainz.search_track(rid, includes=['releases',
+                                                             'artists'])
+
+            artist_credit = search.get('recording').get('artist-credit', [])[0]
+
+            for release in search.get('recording').get('release-list', {}):
+                scrape_release(artist_credit.get('artist', {}).get('id', ''),
+                               release.get('id'))
+
+
 def scrape_release_tracks(data, release):
     for medium_list in data.get('medium-list', {}):
         for track in medium_list.get('track-list', {}):
-            scrape_track(track, release)
+            scrape_release_track(track, release)

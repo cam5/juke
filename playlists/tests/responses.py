@@ -3,6 +3,141 @@ Responses we're probably referencing in mock contextx
 """
 import json
 
+GOAT_DATA = json.loads("""
+[
+    {
+        "artist-relation-list": [
+            {
+                "artist": {
+                    "disambiguation": "New Zealand dream pop",
+                    "id": "74279ef5-64fc-435d-a3c7-19cad255078d",
+                    "name": "French for Rabbits",
+                    "sort-name": "French for Rabbits"
+                },
+                "direction": "backward",
+                "type": "writer",
+                "type-id": "a255bca1-b157-4518-9108-7b147dc3fc68"
+            }
+        ],
+        "ext:score": "100",
+        "id": "4bb3a766-7b8e-4c56-b25e-8086784d01d7",
+        "recording-relation-list": [
+            {
+                "direction": "backward",
+                "recording": {
+                    "id": "421734d4-5392-4f17-bf95-dd12e0dbd97f",
+                    "title": "Goat"
+                },
+                "type": "performance",
+                "type-id": "a3005666-a872-32c3-ad06-98af558e99b0"
+            }
+        ],
+        "title": "Goat"
+    },
+    {
+        "artist-relation-list": [
+            {
+                "artist": {
+                    "id": "de452e3a-9cba-4e9d-8000-6b267fd663c0",
+                    "name": "Joey Dandeneau",
+                    "sort-name": "Dandeneau, Joey"
+                },
+                "direction": "backward",
+                "type": "writer",
+                "type-id": "a255bca1-b157-4518-9108-7b147dc3fc68"
+            },
+            {
+                "artist": {
+                    "id": "ccbfb2d5-a418-406f-b7fc-90a7ecfa5b6e",
+                    "name": "Dean Back",
+                    "sort-name": "Back, Dean"
+                },
+                "direction": "backward",
+                "type": "writer",
+                "type-id": "a255bca1-b157-4518-9108-7b147dc3fc68"
+            },
+            {
+                "artist": {
+                    "disambiguation": "Canadian guitarist",
+                    "id": "1a1cfada-b0be-478e-a9cd-dcb2d1f19dfc",
+                    "name": "Dave Brenner",
+                    "sort-name": "Brenner, Dave"
+                },
+                "direction": "backward",
+                "type": "writer",
+                "type-id": "a255bca1-b157-4518-9108-7b147dc3fc68"
+            },
+            {
+                "artist": {
+                    "id": "39538f21-4adc-400a-9bb4-57c364221700",
+                    "name": "Tyler Connolly",
+                    "sort-name": "Connolly, Tyler"
+                },
+                "direction": "backward",
+                "type": "writer",
+                "type-id": "a255bca1-b157-4518-9108-7b147dc3fc68"
+            }
+        ],
+        "ext:score": "100",
+        "id": "1f3a6ca4-028f-4e8a-b3b0-328fa673a8c7",
+        "language": "eng",
+        "recording-relation-list": [
+            {
+                "direction": "backward",
+                "recording": {
+                    "id": "6ed1c919-c48b-49c1-9e93-a43b58108161",
+                    "title": "G.O.A.T"
+                },
+                "type": "performance",
+                "type-id": "a3005666-a872-32c3-ad06-98af558e99b0"
+            }
+        ],
+        "title": "G.O.A.T",
+        "type": "Song"
+    },
+    {
+        "artist-relation-list": [
+            {
+                "artist": {
+                    "id": "93e8c41e-8e4f-4d08-bbf5-bc1a903b2423",
+                    "name": "Devin Townsend",
+                    "sort-name": "Townsend, Devin"
+                },
+                "direction": "backward",
+                "type": "lyricist",
+                "type-id": "3e48faba-ec01-47fd-8e89-30e81161661c"
+            },
+            {
+                "artist": {
+                    "id": "93e8c41e-8e4f-4d08-bbf5-bc1a903b2423",
+                    "name": "Devin Townsend",
+                    "sort-name": "Townsend, Devin"
+                },
+                "direction": "backward",
+                "type": "composer",
+                "type-id": "d59d99ea-23d4-4a80-b066-edca32ee158f"
+            }
+        ],
+        "ext:score": "100",
+        "id": "91c68fac-f4c6-45b9-9418-cd9e8e6f6a03",
+        "language": "eng",
+        "recording-relation-list": [
+            {
+                "direction": "backward",
+                "recording": {
+                    "id": "128f940c-88ba-4de6-9ad3-734fb157ff11",
+                    "title": "Goat"
+                },
+                "type": "performance",
+                "type-id": "a3005666-a872-32c3-ad06-98af558e99b0"
+            }
+        ],
+        "title": "Goat",
+        "type": "Song"
+    }
+]
+""")
+
 ACHY_BREAKY_DATA = json.loads("""{
 "tracks": {
     "href": "https://api.spotify.com/v1/search?query=%22Achy+Breaky+Heart%22&type=track&offset=0&limit=1",

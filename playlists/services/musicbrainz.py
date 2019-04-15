@@ -48,6 +48,10 @@ def date_to_timezone_aware(ymd_string):
     if 4 == len(ymd_string):
         ymd_string = '{}-01-01'.format(ymd_string)
 
+    # Sometimes you get year/month 2011-02
+    if 7 == len(ymd_string):
+        ymd_string = '{}-01'.format(ymd_string)
+
     return datetime.strptime(
         '{} 00:00:00+00:00'.format(ymd_string),
         '%Y-%m-%d %H:%M:%S%z'
@@ -95,8 +99,16 @@ def search_artist(mbid, **kwargs):
     return musicbrainzngs.get_artist_by_id(mbid, **kwargs)
 
 
+def search_track(mbid, **kwargs):
+    """Look up track by MBID"""
+    return musicbrainzngs.get_recording_by_id(mbid, **kwargs)
+
+
 def dispatch_scrapers(artists, release_groups, tracks):
     publish_message(scrape_release_group, release_groups)
 
     for a in artists:
         publish_message(scrape_artist, a)
+
+    for t in tracks:
+        publish_message(scrape_track, t)
