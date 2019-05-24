@@ -4,12 +4,15 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from playlists import views
 
 urlpatterns = [  # pylint: disable=invalid-name
+    url(r'^playlist/$',
+        views.playlist_scratch,
+        name='react-scratch'),
+
     url(r'^artists/$',
         views.ArtistList.as_view(),
         name='artist-list'),
 
-    url(
-        r'^artists/(?P<pk>[0-9]+)/$',
+    url(r'^artists/(?P<pk>[0-9]+)/$',
         views.ArtistDetail.as_view(),
         name='artist-detail'),
 

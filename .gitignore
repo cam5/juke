@@ -104,3 +104,7 @@ venv.bak/
 
 # mypy
 .mypy_cache/<Paste>
+
+# webpack stuff
+assets/bundles
+webpack-stats.json

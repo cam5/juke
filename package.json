@@ -1,0 +1,41 @@
+{
+  "name": "juke",
+  "version": "1.0.0",
+  "description": "Playlist making app for now",
+  "main": "webpack.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/listen-on-juke/juke.git"
+  },
+  "author": "Cameron Hurd",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/listen-on-juke/juke#readme",
+  "dependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "@babel/preset-env": "^7.4.5",
+    "axios": "^0.18.0",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.0.6",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "webpack": "^4.32.0",
+    "webpack-bundle-tracker": "^0.4.2-beta",
+    "webpack-cli": "^3.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
+    "react-hot-loader": "^4.8.8",
+    "webpack-dev-server": "^3.4.1"
+  }
+}

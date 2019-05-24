@@ -1,6 +1,7 @@
 """Views for playlists app"""
 from rest_framework import generics
 from django.http import JsonResponse
+from django.shortcuts import render
 from drf_multiple_model.views import ObjectMultipleModelAPIView
 from .models import Artist, Release, Track
 from .serializers import ArtistSerializer, ReleaseSerializer, TrackSerializer
@@ -77,3 +78,8 @@ def external_search(request):
         musicbrainz.generic_search(query),
         status=200
     )
+
+
+def playlist_scratch(request):
+    context = {'foo': 'bar'}
+    return render(request, 'playlists/playlist_scratch.html', context)

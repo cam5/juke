@@ -1,0 +1,12 @@
+{% extends 'playlists/base.html' %}
+{% load render_bundle from webpack_loader %}
+
+{% block javascripts %}
+    {% render_bundle 'main' %}
+{% endblock %}
+
+{% block content %}
+<div class="uk-container">
+    <div id="hello-world"></div>
+</div>
+{% endblock %}
