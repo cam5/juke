@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import Search from './search';
 
 class App extends React.Component {
   constructor(props) {
@@ -60,16 +61,6 @@ class App extends React.Component {
         <ul>{this.makeListFromState('tracks')}</ul>
       </div>
     );
-  }
-}
-
-class Search extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (<input type="text" value={this.props.query} onChange={this.props.onQueryChange} />)
   }
 }
 
