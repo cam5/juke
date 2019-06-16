@@ -7,9 +7,7 @@ class Search extends React.Component {
 
   render() {
     return (
-      <div>
-        <input type="text" value={this.props.query} onChange={this.props.onQueryChange} />
-      </div>
+      <input type="text" value={this.props.query} onChange={this.props.onQueryChange} />
     )
   }
 }

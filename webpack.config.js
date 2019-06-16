@@ -36,7 +36,7 @@ module.exports = (env, argv) => {
 
     devServer: {
       contentBase: path.join(__dirname, 'assets/bundles/'),
-      headers: { "Access-Control-Allow-Origin": "*" },
+      headers: { 'Access-Control-Allow-Origin': '*' },
       port: 3000,
       hot: true,
       inline: true,
@@ -59,9 +59,10 @@ module.exports = (env, argv) => {
     config.entry.unshift(
       'webpack-dev-server/client?http://localhost:3000',
       'webpack/hot/only-dev-server',
+      'react-hot-loader/patch',
     );
 
-    config.module.rules[0].use[0].options.plugins.unshift('react-hot-loader/babel');
+    config.module.rules[0].use[0].options.plugins.push('react-hot-loader/babel');
   }
 
   return config;
