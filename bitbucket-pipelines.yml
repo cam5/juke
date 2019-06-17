@@ -13,6 +13,7 @@ pipelines:
         image: node:10.16.0
         script:
           - yarn install
+          - yarn run build
         caches:
           - node
 
