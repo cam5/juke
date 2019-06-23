@@ -1,6 +1,7 @@
 const path = require('path');
 const BundleTracker = require('webpack-bundle-tracker');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
 
 module.exports = (env, argv) => {
@@ -17,6 +18,7 @@ module.exports = (env, argv) => {
     plugins: [
       new CleanWebpackPlugin(),
       new BundleTracker({ filename: './webpack-stats.json' }),
+      new MiniCssExtractPlugin(),
     ],
 
     module: {
@@ -31,6 +33,17 @@ module.exports = (env, argv) => {
               presets: ['@babel/preset-env'],
             },
           }],
+        },
+        {
+          test: /\.s?css$/,
+          use: [
+            {
+              loader: MiniCssExtractPlugin.loader,
+              options: { hmr: process.env.NODE_ENV === 'development' },
+            },
+            'css-loader',
+            'sass-loader',
+          ],
         },
       ],
     },
