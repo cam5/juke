@@ -6,6 +6,7 @@ const webpack = require('webpack');
 module.exports = (env, argv) => {
   const config = {
     context: __dirname,
+
     entry: ['./assets/js/index'],
 
     output: {
@@ -32,6 +33,10 @@ module.exports = (env, argv) => {
           }],
         },
       ],
+    },
+
+    resolve: {
+      extensions: ['.js', '.jsx'],
     },
 
     devServer: {
