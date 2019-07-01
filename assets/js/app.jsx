@@ -46,7 +46,8 @@ class App extends React.Component {
 
 
   makeListFromState(key, subkeys = ['id', 'name']) {
-    return this.state[key].map(d => (<li key={d[subkeys[0]]}>{d[subkeys[1]]}</li>))
+    const stateKey = this.state[key]; // eslint-disable-line react/destructuring-assignment
+    return stateKey.map(d => (<li key={d[subkeys[0]]}>{d[subkeys[1]]}</li>));
   }
 
   render() {
