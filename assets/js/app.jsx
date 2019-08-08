@@ -1,10 +1,30 @@
 import { hot } from 'react-hot-loader/root';
 import React from 'react';
+import PropTypes from 'prop-types';
+import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import axios from 'axios';
 import 'uikit';
 import 'uikit/dist/css/uikit.css';
 import Search from './search';
 import Playlist from './playlist';
+import Artist from './artist-detail';
+
+
+function SearchResults(props) {
+  const { artists, releases, tracks } = props;
+  return (
+    <div>
+      <h2>Artists</h2>
+      <ul>{artists}</ul>
+
+      <h2>Releases</h2>
+      <ul>{releases}</ul>
+
+      <h2>Tracks</h2>
+      <ul>{tracks}</ul>
+    </div>
+  );
+}
 
 class App extends React.Component {
   constructor(props) {
@@ -19,6 +39,7 @@ class App extends React.Component {
     this.componentDidMount = this.componentDidMount.bind(this);
     this.addTrackToPlaylist = this.addTrackToPlaylist.bind(this);
     this.removeTrackFromPlaylist = this.removeTrackFromPlaylist.bind(this);
+    this.renderTrack = this.renderTrack.bind(this);
   }
 
   componentDidMount() {
@@ -65,7 +86,7 @@ class App extends React.Component {
 
       return (
         <li {...htmlAttrs}>
-          {d[valKey]}
+          <Link to={`/${key}/${d.id}`}>{d[valKey]}</Link>
           {key === 'tracks' && !inPlaylist && <button type="button" onClick={handleAddClick}>+</button>}
         </li>
       );
@@ -84,18 +105,54 @@ class App extends React.Component {
     this.setState({ playlist: playlist.filter(t => t.id !== track.id) });
   }
 
+  renderTrack(track) {
+    const { playlist } = this.state;
+    const handleAddClick = () => this.addTrackToPlaylist(track);
+    let inPlaylist = false;
+
+    if (track && playlist.length > 0) inPlaylist = playlist.find(t => t.id === track.id);
+
+    return (
+      <span>
+        {track.name}
+        {!inPlaylist && <button type="button" onClick={handleAddClick}>+</button>}
+      </span>
+    );
+  }
+
   render() {
-    const { query, playlist } = this.state;
+    const { query, playlist, tracks } = this.state;
     return (
       <div className="uk-grid" data-uk-grid>
         <div className="uk-width-1-3">
           <Search onQueryChange={this.handleQueryChange} query={query} />
-          <h2>Artists</h2>
-          <ul>{this.makeListFromState('artists')}</ul>
-          <h2>Releases</h2>
-          <ul>{this.makeListFromState('releases', ['id', 'title'])}</ul>
-          <h2>Tracks</h2>
-          <ul>{this.makeListFromState('tracks')}</ul>
+
+          <Router basname="/playlist/">
+            <Route
+              exact
+              path="/"
+              render={() => (
+                <SearchResults
+                  artists={this.makeListFromState('artists')}
+                  releases={this.makeListFromState('releases', ['id', 'title'])}
+                  tracks={tracks.map(t => (<li key={t.id}>{ this.renderTrack(t) }</li>))}
+                />
+              )}
+            />
+
+            <Route
+              exact
+              path="/artists/:artistId"
+              render={props => (
+                <div>
+                  <div className="uk-margin">
+                    <Link to="/">&larr; Back</Link>
+                  </div>
+                  <Artist id={props.match.params.artistId} onRenderTrack={this.renderTrack} />
+                </div>
+              )}
+            />
+          </Router>
         </div>
         <div className="uk-width-2-3">
           Playlist state data lives here.
@@ -105,5 +162,11 @@ class App extends React.Component {
     );
   }
 }
+
+SearchResults.propTypes = {
+  artists: PropTypes.arrayOf(PropTypes.object).isRequired,
+  releases: PropTypes.arrayOf(PropTypes.object).isRequired,
+  tracks: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 
 export default hot(App);

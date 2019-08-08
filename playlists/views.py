@@ -1,5 +1,6 @@
 """Views for playlists app"""
 from rest_framework import generics
+from rest_framework.response import Response
 from django.http import JsonResponse
 from django.shortcuts import render
 from drf_multiple_model.views import ObjectMultipleModelAPIView
@@ -23,7 +24,12 @@ class ArtistDetail(generics.RetrieveUpdateDestroyAPIView):
 
 class ReleaseList(generics.ListCreateAPIView):
     """View for listing release objects"""
-    queryset = Release.objects.all()
+    def get_queryset(self):
+        artist = self.request.GET.get('artist', None)
+        if artist:
+            return Release.objects.filter(artist=artist)
+        else:
+            return Release.objects.all()
     serializer_class = ReleaseSerializer
 
 
