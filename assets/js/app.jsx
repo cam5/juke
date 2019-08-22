@@ -8,6 +8,7 @@ import 'uikit/dist/css/uikit.css';
 import Search from './search';
 import Playlist from './playlist';
 import Artist from './artist-detail';
+import Release from './release-detail';
 
 
 function SearchResults(props) {
@@ -149,6 +150,19 @@ class App extends React.Component {
                     <Link to="/">&larr; Back</Link>
                   </div>
                   <Artist id={props.match.params.artistId} onRenderTrack={this.renderTrack} />
+                </div>
+              )}
+            />
+
+            <Route
+              exact
+              path="/releases/:releaseId"
+              render={props => (
+                <div>
+                  <div className="uk-margin">
+                    <Link to="/">&larr; Back</Link>
+                  </div>
+                  <Release id={props.match.params.releaseId} onRenderTrack={this.renderTrack} />
                 </div>
               )}
             />

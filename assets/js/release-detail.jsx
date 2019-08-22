@@ -2,20 +2,20 @@ import React from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 
-class Release extends React.PureComponent {
+class Release extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { data: {} };
+    this.state = { data: { tracks: [] } };
   }
 
   componentDidMount() {
     const { id, data } = this.props;
 
-    this.setState({ data });
+    if (Object.keys(data).length) this.setState({ data });
 
     if (id && (!data || Object.keys(data).length === 0)) {
       axios.get(`http://localhost:8000/releases/${id}/`)
-        .then(response => this.setState({ data: response }));
+        .then(response => this.setState({ data: response.data }));
     }
   }
 
