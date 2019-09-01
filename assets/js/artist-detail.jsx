@@ -35,7 +35,7 @@ class Artist extends React.PureComponent {
         <div>
           <Pluralize singular="release" count={releaseCount} zero="No releases" />
         </div>
-        { releases.map(r => (<Release key={r.id} data={r} onRenderTrack={onRenderTrack} />)) }
+        { releases.map(r => (<Release key={r.mbid} data={r} onRenderTrack={onRenderTrack} />)) }
       </div>
     );
   }

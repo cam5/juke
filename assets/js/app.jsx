@@ -36,6 +36,7 @@ class App extends React.Component {
 
     this.handleQueryChange = this.handleQueryChange.bind(this);
     this.handleSearchResponse = this.handleSearchResponse.bind(this);
+    this.appendSearchResponse = this.appendSearchResponse.bind(this);
     this.updateQuery = this.updateQuery.bind(this);
     this.componentDidMount = this.componentDidMount.bind(this);
     this.addTrackToPlaylist = this.addTrackToPlaylist.bind(this);
@@ -53,8 +54,12 @@ class App extends React.Component {
   handleQueryChange(e) {
     const val = e.target.value;
     axios.get(`http://localhost:8000/search/?q=${val}`)
+      .then(this.updateQuery(val))
       .then(this.handleSearchResponse)
-      .then(this.updateQuery(val));
+      .then(
+        () => axios.get(`http://localhost:8000/search/external/?q=${val}`)
+          .then(response => this.appendSearchResponse(response)),
+      );
   }
 
   handleSearchResponse(response) {
@@ -63,6 +68,17 @@ class App extends React.Component {
       artists: results.Artist,
       releases: results.Release,
       tracks: results.Track,
+    });
+  }
+
+  appendSearchResponse(response) {
+    const results = response.data;
+    this.setState((prevState) => {
+      results.Artist.map(a => prevState.artists.push(a));
+      results.Release.map(r => prevState.releases.push(r));
+      results.Tracks.map(t => prevState.tracks.push(t));
+
+      return prevState;
     });
   }
 
@@ -82,7 +98,7 @@ class App extends React.Component {
 
       // Flag to allow "Add" button.
       if (key === 'tracks' && typeof d !== 'undefined' && playlist.length > 0) {
-        inPlaylist = playlist.find(t => t.id === d.id);
+        inPlaylist = playlist.find(t => t.mbid === d.mbid);
       }
 
       return (
@@ -96,14 +112,14 @@ class App extends React.Component {
 
   addTrackToPlaylist(track) {
     this.setState((prevState) => {
-      if (!prevState.playlist.find(t => t.id === track.id)) prevState.playlist.push(track);
+      if (!prevState.playlist.find(t => t.mbid === track.mbid)) prevState.playlist.push(track);
       return { prevState };
     });
   }
 
   removeTrackFromPlaylist(track) {
     const { playlist } = this.state;
-    this.setState({ playlist: playlist.filter(t => t.id !== track.id) });
+    this.setState({ playlist: playlist.filter(t => t.mbid !== track.mbid) });
   }
 
   renderTrack(track) {
@@ -111,11 +127,11 @@ class App extends React.Component {
     const handleAddClick = () => this.addTrackToPlaylist(track);
     let inPlaylist = false;
 
-    if (track && playlist.length > 0) inPlaylist = playlist.find(t => t.id === track.id);
+    if (track && playlist.length > 0) inPlaylist = playlist.find(t => t.mbid === track.mbid);
 
     return (
       <span>
-        {track.name}
+        {track.name || track.title}
         {!inPlaylist && <button type="button" onClick={handleAddClick}>+</button>}
       </span>
     );
@@ -135,8 +151,8 @@ class App extends React.Component {
               render={() => (
                 <SearchResults
                   artists={this.makeListFromState('artists')}
-                  releases={this.makeListFromState('releases', ['id', 'title'])}
-                  tracks={tracks.map(t => (<li key={t.id}>{ this.renderTrack(t) }</li>))}
+                  releases={this.makeListFromState('releases', ['mbid', 'title'])}
+                  tracks={tracks.map(t => (<li key={t.mbid}>{ this.renderTrack(t) }</li>))}
                 />
               )}
             />
