@@ -1,7 +1,9 @@
 """Url patterns for playlist app."""
+from django.urls import path, include
 from django.conf.urls import url
 from rest_framework.urlpatterns import format_suffix_patterns
 from playlists import views
+import django_eventstream
 
 urlpatterns = [  # pylint: disable=invalid-name
     url(r'^playlist/$',
@@ -39,6 +41,10 @@ urlpatterns = [  # pylint: disable=invalid-name
     url(r'^search/$',
         views.GenericSearch.as_view(),
         name='generic-search'),
+
+    path(r'events/',
+         include(django_eventstream.urls),
+         {'format-channels': ['test']}),
 ]
 
 # pylint: disable=invalid-name

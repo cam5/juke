@@ -56,17 +56,20 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_multiple_model',
     'carrot',
+    'channels',
+    'django_eventstream',
     'playlists'
 ]
 
 MIDDLEWARE = [
+    'django_grip.GripMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware'
 ]
 
 ROOT_URLCONF = 'juke.urls'
@@ -92,7 +95,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'juke.wsgi.application'
+# WSGI_APPLICATION = 'juke.wsgi.application'
+ASGI_APPLICATION = 'juke.routing.application'
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
